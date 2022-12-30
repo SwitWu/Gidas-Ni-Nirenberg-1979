@@ -1,0 +1,45 @@
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage[shortlabels]{enumitem}
+\usepackage{caption}
+\captionsetup[figure]{labelfont={bf},name={Fig.},labelsep=period}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem*{lemma*}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem*{corollary*}{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\counterwithin{equation}{section}
+\DeclareMathOperator{\tr}{tr}
+
+\makeatletter
+\newcommand{\neutralize}[1]{\expandafter\let\csname c@#1\endcsname\count@}
+\makeatother
+
+\newenvironment{theoremp}[1]
+  {\renewcommand{\thetheorem}{\ref{#1}$'$}%
+   \addtocounter{theorem}{-1}%
+   \begin{theorem}}
+  {\end{theorem}}
+
+\newenvironment{theorempp}[1]
+{\renewcommand{\thetheorem}{\ref{#1}$''$}%
+  \addtocounter{theorem}{-1}%
+  \begin{theorem}}
+  {\end{theorem}}
+
+%prime theorem
+\NewDocumentEnvironment{manual}{O{theorem}m}
+{%
+	\addtocounter{theorem}{-1}%
+	\renewcommand\thetheorem{#2}%
+	\begin{#1}
+	}
+	{\end{#1}}
+
+\usepackage{hyperref}
+\hypersetup{colorlinks=true}

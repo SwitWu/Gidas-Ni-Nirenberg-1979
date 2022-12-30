@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\begin{document}
+
+\begin{tikzpicture}
+  \draw[->] (-2,0)--(2.7,0) node[below]{$x$};
+  \draw[->] (0,-2)--(0,2) node[left]{$y$};
+  \draw (-1.7,0)--(0,1.7)--(1.7,0) node[anchor=south west]{$\scriptstyle P=(1/\sqrt{2},0)$}--(0,-1.7)--cycle;
+\end{tikzpicture}
+
+\end{document}

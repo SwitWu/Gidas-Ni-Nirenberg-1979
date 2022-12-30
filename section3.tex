@@ -1,0 +1,269 @@
+\section{Further Results}
+	
+3.1 In this section we take up extensions of results of Sect.~2 to \textit{optimal} caps 
+and to special domains with corners. We shall use the same notation.
+
+We first try to extend Theorem \ref{thm:2.1prime} to optimal caps. 
+Consider a solution $u$ of \eqref{eq:2.1prime}
+\textit{with $F$ independent of $u_{1,\alpha}$ for $\alpha>1$}:
+\begin{equation}\label{eq:3.1}
+  F(x,u,u_j,u_{11},u_{\alpha\beta})=0;
+\end{equation}
+here $j$ ranges from 1 to $n$ and $\alpha,\beta$ from 2 to $n$. This includes Eq.~(2.1).
+
+Assume that $u$ satisfies, in place of (a) of Sect.~2.1:
+\[\mathrm{(A)}\quad \text{$u\in C^2(\bar{\Omega})$, $u>0$ in $\Omega$, $u=0$ on $\partial\Omega$.}\]
+We assume that $F$ satisfies conditions (b), (c) as before but in an optimal cap: 
+
+(B)  On $\partial\Omega\cap\{x_1>\lambda_2\}$ the function $g(x)=F(x,0,\cdots,0)$ satisfies
+\[g(x)\geq 0\ \forall x,\quad\text{or}\quad g(x)<0\ \forall x.\]
+
+(C)  For every $\lambda$ in $\lambda_2\leq \lambda<\lambda_0$ and for $x\in\Sigma(\lambda)$ and all values of the arguments $u,p_j,p_{jk}$ with $u>0,p_1<0$.
+\begin{equation}\label{eq:3.2}
+  F(x^{\lambda},u,-p_1,p_2,\cdots,p_n,p_{11},p_{\alpha\beta})\geq  F(x,u,p_1,\cdots,p_n,p_{\alpha\beta}).
+\end{equation}
+
+\begin{theorem}\label{thm:3.1}
+  Assume conditions \textrm{(A)}, \textrm{(B)} and \textrm{(C)} are satisfied.
+  Then for $\lambda_2<\lambda<\lambda_0$,
+  \begin{equation}\label{eq:3.3}
+    u_1(x)<0\quad\text{and}\quad u(x)<u(x^{\lambda})\quad\text{for}\quad x\in\Sigma(\lambda).
+  \end{equation}
+  Furthermore, if $u_1 =0$ at some point on $\Omega\cap T_{\lambda}$, then $u$ is symmetric in the plane $T_{\lambda_2}$ and
+  \begin{equation}\label{eq:3.4}
+    \Omega=\Sigma(\lambda_2)\cup\Sigma^{\prime}(\lambda_2)\cup(T_{\lambda_2}\cap\Omega).
+  \end{equation}
+\end{theorem}
+
+\begin{proof}[Proof of Thorem \ref{thm:3.1}] 
+  The proof begins like that of Theorem \ref{thm:2.1}. By Lemma \ref{lemma:2.1} (see Sect.~2.4), 
+  for $\lambda$ close to $\lambda_0$, $\lambda<\lambda_0$, we find that \eqref{eq:3.3} holds.
+  
+  Decrease $\lambda$ until a critical value $\mu\geq \lambda_2$ is reached beyond which it no longer holds. Then for $\lambda=\mu$ we have
+  \begin{equation}\label{3.5}
+    u_1(x)<0\quad\text{and}\quad u(x)\leq  u(x^{\mu})\quad\text{for}\quad x\in\Sigma(\mu).
+  \end{equation}
+  We will show that $\mu=\lambda_0$. Suppose $\mu>\lambda_2$. For some point $x_0\in\partial\Sigma(\mu)\backslash T_{\mu}$ we have $x_0^{\mu}\in\Omega$. Since $0=u(x_0)<u(x_0^{\mu})$ we see that $u(x)\not\equiv u(x^{\mu})$ in $\Sigma(\mu)$. In $\Sigma^{\prime}(\mu)$ we set
+  \begin{equation}\label{eq:3.6}
+    u_1(x)=u(x^{\mu}),\qquad w(x)=v(x)-u(x)
+  \end{equation}
+  so that $w\leq 0$, $w\not\equiv0$. The function $v$ satisfies, $v_1>0$ and
+  \begin{equation}\label{eq:3.7}
+    \begin{aligned}
+      F(x,&v(x),v_j,v_{11},v_{\alpha\beta})\\
+      &=F(x,u(x^{\mu}),-u_1(x^{\mu}),u_{\gamma}(x^{\mu}),u_{11}(x^{\mu}),u_{\alpha\beta}(x^{\mu})).
+    \end{aligned}
+  \end{equation}
+  Since $x^{\mu}\in\Sigma(\mu)$ and $u_l(x^{\mu})<O$ we see from \eqref{eq:3.2} that the last expression is
+  \begin{equation}\label{eq:3.8}
+    \begin{aligned}
+      &\geq  F(x^{\mu},u(x^{\mu}),u_j(x^{\mu}),u_{11}(x^{\mu}),u_{\alpha\beta}(x^{\mu}))\\
+      &=0.
+    \end{aligned}
+  \end{equation}
+  Using $F(x, u, \cdots)=0$ in $\Sigma^{\prime}(\mu)$ we may apply the theorem of the mean in integral form and conclude that $w$ satisfies a differential inequality of the form (1.10) in $\Sigma\prime(\mu)$ with $ a_{1\alpha}=0 $ for $\alpha > 1$.
+  By the maximum principle, $w < 0$ in $\Sigma^{\prime}(\mu)$, and by Lemma H, since $w$ achieves its maximum, zero, at every point of $T_{\mu}$,
+  \[0<w_1=-2\mu_1 \quad\text{on}\quad T_{\mu}\cap\Omega.\]
+  Thus
+  \begin{equation}\label{eq:3.9}
+    u(x)<u(x^{\mu})\quad\text{for}\quad x\in\Sigma(\mu)\quad\text{and}\quad u_1<0\quad\text{on}\quad\Omega\cap T_{\mu};
+  \end{equation}
+  in particular \eqref{eq:3.3} holds for $\lambda=\mu$. Furthermore, by Lemma S, at any point $Q\in\partial\Omega\cap T_{\mu}$ where $T_{\mu}$ is orthogonal to $\partial\Omega$,
+  \[\frac{\partial w}{\partial s}<0\quad\text{or}\quad\frac{\partial^2 w}{\partial^2 s}<0\quad\text{at} Q\]
+  for any direction $s$ at $Q$ entering $\Sigma^{\prime}(\mu)$ nontangentially. At $Q$ however the functions $v$ and $u$ have the same normal derivative to $\partial\Omega$ and zero tangential derivatives, so that $\partial w(Q)/\partial s=0$. Hence
+  \begin{equation}\label{eq:3.10}
+    \frac{\partial^2 w}{\partial^2 s}(Q)<0.
+  \end{equation}
+  From our definition of $\mu$ one of the following holds :
+  
+  (i) There is a sequence $y_j$ converging to some point $y$ on $T_{\mu}$ with
+  \[u_1(y_j)\geq 0\]
+  or
+  
+  (ii) There are sequences $\lambda^j$, $ \lambda_2<\lambda^j\nearrow\mu$ and $x_j\in\Sigma(\lambda^j)$ such that
+  \begin{equation}\label{eq:3.11}
+    u(x_j)\geq  u(x_j^{\lambda^j}).
+  \end{equation}
+  Consider case (i). Clearly $u_l(y)\geq 0$. By \eqref{eq:3.9}, $y$ must lie on $\partial\Omega$. Suppose $T_{\mu}$ is not orthogonal to $\partial\Omega$ at $y$. Then necessarily $v_l(y)>0$, and by Lemma 2.1, $u_1 <0$ in a neighbourhood in $\Omega$ of $y$ - a contradiction. Thus $T_{\mu}$ must be orthogonal to $\partial\Omega$ at $y$; we may suppose $v(y)=(0,\cdots,0,1)= e_n$. Choose the direction $s$ to be $(- 1/\sqrt{2}, 0, \cdots, 0, - 1/\sqrt{2})$. Then according to \eqref{eq:3.10}
+  \[\left( \frac{\partial}{\partial x_1} + \frac{\partial}{\partial x_n} \right)^2 w < 0 \quad\text{at } y\]
+  i.e.
+  \[\left(\frac{\partial}{\partial x_1} + \frac{\partial}{\partial x_n} \right)^2 v < \left(\frac{\partial}{\partial x_1} + \frac{\partial}{\partial x_n} \right)^2 u  \quad\text{at } y.\]
+  But $v_{11}=u_{11}$, $v_{nn}=u_{nn}$, $v_{1n}=-u_{1n}$ at $y$, so
+  \[u_{1n}>0\quad\text{at $y$ and hence near $y$.}\]
+  If we integrate this on the segment in the $e_n$ direction from $y_j$ ($j$ large), to the point $x$ where it hits $\partial\Omega$ we find that $u_1(x)>0$. But for $x\in\overline{\Sigma(\lambda_2)}\cap\partial\Omega$ we have $v_l(x)\geq 0$ and hence $u_l(x)\leq 0$. Thus case (i) is impossible.
+  
+  On to case (ii). We may suppose $x_j$ converges to $x$ in $\overline{\Sigma(\mu)}$; then $u(x) \geq  u(x^{\mu})$. By \eqref{eq:3.9}, $x\in\partial\Sigma(\mu)$. If $x$ lies on $T_{\mu}$ then for $j$ large the segment from $x_j$ to $x_j^{\lambda^j}$ lies in $\Omega$, and then contains a point $y_j$ satisfying the conditions of case (i) - which we know to be impossible. Thus $x\notin T_{\mu}$. If $x^{\mu}\in\Omega$ then $0 = u(x)<u(x^{\mu})$, a contradiction, so we also have $x^{\mu}\in\partial\Omega$. Since $\mu>\lambda_2$ it follows that $v(x)= v(x^{\mu})$ and these are orthogonal to $(1, 0, \cdots, 0)$. We may suppose these normals are $e_n = (0,\cdots ,0, 1)$. But then in $\overline{\Sigma^{\prime}(\mu)}$ the function $w(x)$ defined in \eqref{eq:3.8} achieves its maximum, zero, at $x^{\mu}$ and hence by Lemma H
+  \begin{equation}\label{eq:3.12}
+    w_n(x^{\mu})>0.
+  \end{equation}
+  On the other hand, since $\Sigma^{\prime}(\lambda_j)\subset\Omega$, the segment $I_j$ in the $e_n$ direction from $x_j$ to $\partial\Omega$ is not longer than that, $\tilde{I}_j$, from $x_j^{\lambda^j}$ to $\partial\Omega$. Using the fact that $u = 0$ on $\partial\Omega$ it follows from the theorem of the mean that $I_j$ and $\tilde{I}_j$ contain points $z_j$, $\tilde{z}_j$ respectively such that
+  \[ \begin{aligned}
+    -u(x_j) &= u_n(z_j)|I_j|\\
+    -u(x_j^{\lambda^j}) &= u_n(\tilde{z}_j)|\tilde{I}_j|.
+  \end{aligned} \]
+  Here $|I_j|$ denotes the length of $I_j$. Hence
+  \[-u_n(z_j)|I_j|\geq  -u_n(\tilde{z}_j)|\tilde{I}_j| >0\]
+  and since $|I_j| < |\tilde{I}_j|$,
+  \[-u_n(z_j)\geq  -u_n(\tilde{z}_j).\]
+  Letting $j\rightarrow\infty$ we find
+  \[-u_n(x)\geq  -u_n(x^{\mu}),\]
+  contradicting \eqref{eq:3.12}. Thus case (ii) is impossible.
+  
+  We have proved that $\mu=\lambda_2$, and hence \eqref{eq:3.3} for $\lambda_2<\lambda<\lambda_0$. 
+  The remainder of the proof of the theorem is the same as for Theorem \ref{thm:2.1}
+  and will be omitted.
+\end{proof}
+
+Theorem \ref{thm:3.1} admits various applications as in Sect.~2. We mention only one:
+\setcounter{corollary}{0}
+\begin{corollary}
+  Let $\Omega$ be symmetric about $x_1 = 0$ and convex in the $x_1$ direction.
+  Suppose $u\in C^2(\bar{\Omega})$ is a solution of
+  \[ \Delta u+ f(x,u)=O \quad\text{in }\Omega, \]
+  satisfying condition (A). Assume $f$ and $f_u$ are continuous for $x\in\bar{\Omega}$, 
+  and $f$ is symmetric in $x_1$ with $f$ decreasing in $x_1$ for $x_1 >0$. 
+  Then $u$ is symmetric in $x_1$ and $u_{x_1} <0$ for $x_1>0$.
+\end{corollary}
+
+\noindent
+3.2. Our results have required smoothness of $\partial\Omega$. 
+Next we consider a special domain with corners, namely a finite cylinder:
+$\Omega=(-a, a)\times G$ where $G$ is a bounded domain in $\mathbb{R}^{n-1}$ 
+with $\partial G$ smooth. (It will be clear that this result can be extended 
+to more general situations.) Corresponding to $\gamma = e_1$ we have $\lambda_2 =0$,
+i.e., the optimal cap is $\Omega\cap\{x_1 >0\}$. We consider a solution $u$ in 
+$\Omega$ of \eqref{eq:3.1} satisfying
+\[\mathrm{(A^{\prime})}\quad u\in C^2(\bar{\Omega}), \qquad u>0 \quad \text{in}\quad\Omega,\qquad u=0\quad\text{on}\quad\partial\Omega.\]
+The function $F$ in \eqref{eq:3.1} is assumed to be independent of $u_1$, i.e., \eqref{eq:3.1} has the form
+\[ F(x, u, u_2,\ldots,u_n, u_{11}, u_{\beta\gamma}) = 0. \]
+Also $F$ is to satisfy condition (C) which now just takes the form:
+\[\mathrm{(C^{\prime})}\quad \text{$F$ is decreasing in $x_1$ for $x_1 >0$.} \]
+
+We do not require condition (B).
+
+\begin{theorem}\label{thm:3.2}
+  Under the preceding conditions on $u$ and $F$ the results of Theorem \ref{thm:3.1} hold.
+\end{theorem}
+
+\begin{proof}
+  It is the same as that of Theorem \ref{thm:3.1} except at the very beginning, when we assert that for $\lambda$ less than, but close to, $\lambda_0$ conditions \eqref{eq:3.3} hold. We cannot rely here on Lemma \ref{lemma:2.1} since the boundary is not smooth. To get around this difficulty we will use the corollary of the maximum principle of \S 1 to prove:
+\end{proof}
+
+\begin{lemma}\label{lem:3.1}
+  For $\lambda$ less than but close to $\lambda_0$, \eqref{eq:3.3} holds.
+\end{lemma}
+
+\begin{proof}
+  For $\lambda_0-\varepsilon<\lambda<\lambda_0$ the region $\Sigma^{\prime}(\lambda)$ has width $<\varepsilon$ in the direction $e_1 =(1,0,\ldots,0)$. In $\Sigma^{\prime}(\lambda)$ the function $v(x)=u(x^{\lambda})$ satisfies
+  \[ F(x, v(x), v_{\alpha}(x), v_{11}(x), v_{\beta\gamma}(x) ) \geq  F(x^{\lambda}, v(x), v_{\alpha}(x), v_{11}(x), v_{\beta\gamma}(x) ) =0. \]
+  Hence $w=v(x)-u(x)$ satisfies an inequality of the form \eqref{eq:1.10} with bounded 
+  coefficients in $\Sigma^{\prime}(\lambda)$. Also $w \leq  0$ 
+  on $\partial\Sigma^{\prime}(\lambda)$. 
+  It follows from the maximum principle and its corollary that for $\varepsilon$ small, 
+  $w<0$ in $\Sigma^{\prime}(\lambda)$; by Lemma H, on $T_{\lambda}$, 
+  $0<w_1 = -2u_1$. Consequently \eqref{eq:3.3} holds for $\lambda$ close to $\lambda_0$.
+\end{proof}
+
+Theorems \ref{thm:3} and 3$^{\prime}$ are essentially special cases of Theorem \ref{thm:3.2}.
+
+Using the same argument one proves the following results.
+
+\begin{theoremp}{thm:3.2}\label{thm:3.2'}
+  Let $\Omega$ be an isosceles triangle in the plane with base on the $x$ axis, centered at the origin. Let $u\in C^2(\bar{\Omega}\backslash\text{corners})\cap C(\bar{\Omega})$ satisfy
+  \[ \Delta u+f(u)=0 \quad\text{in}\quad \Omega,\qquad u=0 \quad\text{on}\quad\partial\Omega, \]
+  with $f$ locally Lipschitz continuous. If $u > 0$ in $\Omega$, then $u$ is symmetric about the $y$ axis, and $u_x < 0$ for $x > 0$ in $\Omega$.
+\end{theoremp}
+\begin{theorempp}{thm:3.2}\label{thm:3.2''}
+  Let $u$ and $f$ be as in Theorem \ref{thm:3.2'}, but with $\Omega$ an infinite angular sector $0 < \theta < \theta_0 < \pi$. Then for any fixed angle $\phi$ in $\theta_0-\pi/2 < \phi < \pi/2$, $u_x \cos\phi + u_y\sin\phi > 0$ at every point of $\Omega$.
+\end{theorempp}
+
+Both results admit various extensions to higher dimensions.\medskip
+
+\noindent
+3.3. Let us specialize this still further and suppose that $G$ is a ball $|x^{\prime}| <b$ in $\mathbb{R}^{n-1}$; here $x^{\prime}= (x_2, \ldots, x_n)$, and that the equation has rotational symmetry in $G$.
+
+Can we conclude the same of the solution? We will take up a simple case : $u > 0$ is a solution in $\Omega$ of
+\[ a_{11}(x_1)u_{11} + \sum_{\alpha>1}u_{\alpha\alpha} + f(x_1,|x^{\prime}|,u) = 0 \]
+with $u\in C^2(\bar{\Omega}), u=0$ on $\partial\Omega$ and $f$, $f_u$ continuous in $\bar{\Omega}\times\mathbb{R}^{+}$. Assume conditions (B) and (C) in the following form:
+\[ \mathrm{(\tilde{B})}\quad f(x_1,b,0)\geq 0 \quad\text{for}\quad|x_1|\leq  a \]
+or
+\[ \mathrm{(\tilde{B})}\quad f(x_1,b,0)<0 \quad\text{for}\quad|x_1|\leq  a. \]
+\[ \mathrm{(\tilde{C})}\quad f(x_1,\varrho,u)\text{ is decreasing in $\varrho$ for $0<\varrho<b$}. \]
+\begin{theorem}\label{thm:3.3}
+  Under the conditions above, $u$ is radially symmetric in the variables $x^{\prime}$,
+  i.e., $u=u(x_1, |x^{\prime}|)$, and
+  \[ u_{\varrho}(x_1,\varrho)<0\quad\text{for}\quad |x_1|<a,\quad0<\varrho<b. \]
+\end{theorem}
+
+The proof uses the analogue of Lemma \ref{lemma:2.1}:
+\begin{lemma}\label{lem:3.2}
+  The set $\Sigma=\{|x_1|\leq a\}\times(\partial G\cap\{x_n>0\})$ has a neighbourhood in $Q$ in which $u_n <0$.
+\end{lemma}
+\begin{proof}
+  Lemma \ref{lemma:2.1} (with the variable $x_n$ in place of $x_l$) 
+  applies to any point $X_0\in\{x_1<a\} \times (\partial G\cap\{x_n>0\})$ 
+  and gives the desired result. Thus we need only consider a point $x_0$ 
+  in $\Sigma$ with $x_{01} = \pm a$; suppose $x_{01} = a$. So
+  \[ x_0=(a,x_{02},\cdots,x_{0n}),\quad \sum_{2}^{n}x_{0j}^2 = b^2,\quad x_{0n}>0. \]
+  Consider the first case in (\~B). By (\~C),
+  for $x=(x_1,x^{\prime})$ close to $x_0$, we have
+  \[ f(x_1,|x^{\prime}|,0)\geq 0. \]
+  Consequently by the theorem of the mean we see that in such a neighbourhood of $x_0$, 
+  $u$ satisfies
+  \[ a_{11}u_{11}+\sum_{\alpha>1} u_{\alpha\alpha} + c(x)u \leq 0 \]
+  for some continuous function $c$. We may therefore apply Lemma S to $-u$ and conclude, since grad $u(x_0)= 0$, that $(\partial_1 + \partial_n)^2 u > 0$ at $x_0$. Since $u_{11} = u_{nn} = 0$ there we have
+  \[u_{1n}(x_0)>0.\]
+  Hence $u_{1n} > 0$ near $x_0$ and since $u_n =0$ on $x_l = a$ the desired conclusion follows.
+  
+  In the second case of (\~B) we have $a_{11}u_{11} + \sum_{\alpha>1} u_{\alpha\alpha}>0$ at $x_0$. But in fact this expression is zero at $x_0$ so that the case does not apply. The lemma is proved.
+\end{proof}
+
+\begin{proof}[Proof of Theorem \ref{thm:3.3}]
+  We will prove $u$ is symmetric in $x_n$ and $u_n < 0$ for $x_n > 0$. 
+  Since we may rotate the coordinates $x^{\prime}$ the general result will follow. 
+  Using Lemma \ref{lem:3.1}, we see that for $\lambda<b$ but $\lambda$ close to $b$,
+  the analogue of \eqref{eq:3.3} holds, i.e.,
+  \begin{equation}\tag{$\widetilde{3.3}$}\label{eq:3.3t}
+    u_n(x)<0\quad \text{and} \quad u(x)<u(x^{\lambda}) \quad\text{for}\quad \lambda<x_n<b; 
+  \end{equation}
+  here $x^{\lambda}$ is the reflection of $x$ in the plane $x_n = \lambda$. It suffices to prove that \eqref{eq:3.3t} holds for every $\lambda>0$. To do this we proceed as in the proof of Theorem \ref{thm:3.1}. Decrease $\lambda$ until a critical value $\mu\geq  0$ is reached beyond which \eqref{eq:3.3t} no longer holds. Then we have
+  \begin{equation}
+    u_n(x)<0\quad\text{and}\quad u(x)\leq  u(x^{\mu}) \quad\text{for}\quad x_n>\mu.
+  \end{equation}
+  We wish to show that $\mu=0$. Suppose $\mu>0$. We follow the proof of Theorem \ref{thm:3.1}, and have to consider cases (i) or (ii) there (with $x_n$ in place of $x_1$). In case (i) we also have to look at the possibility that $y$ lies on $T_{\mu}\cap \{\partial G \times [-a,a] \}$. This is excluded by Lemma \ref{lem:3.1}. Case (ii) is treated as before and we may regard the proof as complete.
+\end{proof}
+
+\begin{remark}
+  All the preceding results remain valid if we replace $F$ (respectively $f$) by $F_1+F_2$ ($f_l +f_2$) where $F_1,F_2(f_1,f_2)$ are as in Remark 1$^{\prime}$ in Sect.~2---under the additional
+  condition \eqref{eq:3.1}.
+\end{remark}
+
+\noindent
+3.4. We conclude with an analogue of Corollary 2 of Theorem 2.1$^{\prime}$.
+\begin{remark}
+  Let $\Omega = (- 1, 1)\times (- 1, 1)$ in $\mathbb{R}^2$ and let $u(x, y)$ 
+  be a positive solution in $\Omega$ belonging to $C^2(\Omega)$ of
+  \[ \Delta u+f(x,y,u)=0\quad\text{in}\quad\Omega,\qquad u=0\quad\text{on}\quad\partial\Omega \]
+  where $f, f_n$ are continuous in $\bar{\Omega}\times\mathbb{R}^{+}$. Assume $f$ satisfies
+  \begin{enumerate}[(i)]
+    \item $f$ is symmetric in $x$ and $y$ and nonincreasing on each segment $S$ perpendicular to the diagonal $D:x = y$ as we go from the diagonal to $\partial\Omega$
+    \item $f(x,y,0)\geq 0$ for all $(x,y)\in\partial\Omega$ or $f(x,y,0)<0$ for all $(x,y)\in\partial\Omega$.
+  \end{enumerate}
+  Then $u$ is symmetric in $x$ and $y$ and is strictly decreasing on each such interval $S$.
+\end{remark}
+\begin{proof}
+  For convenience we set $\Omega$ as in the figure so that $f(x, y, u)$ is symmetric in $x$ and nonincreasing in $x$ for $x > 0$.
+  
+  The proof is then identical to that of Theorem \ref{thm:2.1}, 
+  moving lines $x = \lambda$, once we can get it started, i.e.,
+  for $\lambda$ less than but close to $1/\sqrt{2}$.
+
+  \begin{figure}[htbp]
+    \centering
+    \includegraphics[width=.7\textwidth]{figure/fig3.pdf}
+    \caption{}
+    \label{fig:3}
+  \end{figure}
+  
+  We have only to show that $u_1 <0$ in a neighbourhood in $\Omega$ of $P$, and the proof then proceeds as before. This is proved as in the proof of Theorem \ref{thm:3.1} using Lemmas H and S.
+\end{proof}

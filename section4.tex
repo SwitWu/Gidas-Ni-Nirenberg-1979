@@ -1,0 +1,228 @@
+\section{The Proof of Theorem 4}
+First, the
+\begin{proof}[Proof of Proposition 1]
+	Under the change of variables
+	\[x\rightarrow y=\frac{x}{|x|^2},\qquad v(x)=|y|^{n-2}u(y)\]
+	The Eq. (1.8') transforms to the equation in $y\neq0$
+	\begin{equation}\label{eq:4.1}
+		\Delta u(y) = - |y|^{-n-2} f(|y|^{n-2}u(y)) = - F(y)
+	\end{equation}
+	and $u(y)$ is bounded near $y = 0$. Furthermore
+	\[ F(y) = |y|^{-n-2} f(|y|^{n-2}u(y)) = u^k g(|y|^{n-2}u(y))|y|^{k(n-2)-(n + 2)} \]
+	is bounded near $y=0$. It is then easy to see that $u$ is a distribution solution
+  of \eqref{eq:4.1} in $\mathbb{R}^n$ including the origin. Since $F(y)$ 
+  is bounded near the origin we see that $u\in W^{2,p}, \forall p < \infty$;
+  thus $u\in C^1$. But then $F(y)$ is H\"older continuous near the origin and it follows 
+  that $u$ has H\"older continuous second derivatives. From the maximum principle 
+  it follows that $u(0)= a_0 > 0$. Consequently near the origin we have
+	\[u(y) = a_0 + u_i(O)y_i + \frac12 u_{ij}(0)y_iy_j + o(|y|^2)\]
+	and
+	\[u_i(y) = u_i(0) + u_{ij}(0)y_j + o(|y|).\]
+	These yield \eqref{eq:1.9} for $v(x)=|x|^{2-n}u\bigl(\frac{x}{|x|^2}\bigr)$.
+\end{proof}
+
+
+\noindent
+\textit{Proof of Theorem 4.} 
+	We shall apply the procedure of moving planes from infinity but in order to get it started
+  we first shift the origin in order to simplify the expansions \eqref{eq:1.9}.
+  Replace $x$ by $x-x_0$ where
+	\begin{equation}\label{eq:4.2}
+		x_{0j} = -\frac{a_j}{ma_0}.
+	\end{equation}
+	Since, for $q > 0$,
+	\[ \frac{1}{|x-x_0|^q} = \frac{1}{|x|^q} \left( 1+\frac{q}{|x|^2}x_jx_{0j}+\cdots \right) \]
+	we find
+	\begin{equation}\label{eq:4.3}
+		\begin{aligned}
+			v &= \frac{1}{|x|^m} \left(1+\frac{m}{|x|^2}x_jx_{0j}+\cdots\right) \left( a_0+\frac{a_j(x_j-x_{0j})}{|x-x_0|^2} + \frac{a_{ij}x_ix_j}{|x|^4} + o\left(\frac{1}{|x|^2}\right) \right)\\
+			&= \frac{1}{|x|^m} \left( a_0 + \frac{a_{ij}x_ix_j}{|x|^4} + o\left(\frac{1}{|x|^2}\right) \right)
+		\end{aligned}
+	\end{equation}
+	with different coefficients $a_{ij}$. Similarly
+	\begin{equation}\tag{4.3$^{\prime}$}\label{eq:4.3'}
+		\begin{aligned}
+			v_{x_i} =& -\frac{m(x_i-x_{0i})}{|x|^{m+2}} \left( 1+\frac{m+2}{|x|^2} x_kx_{0k} +\cdots \right) \left( a_0+\frac{a_jx_j}{|x|^2} \right)\\
+			&+ \frac{a_i}{|x|^{m+2}} - \frac{2x_i}{|x|^{m+4}} a_jx_j + O(|x|^{-m-3})\\
+			=& -\frac{m}{|x|^{m+2}} a_0x_i + O(|x|^{-m-3}).
+		\end{aligned}
+	\end{equation}
+	In these new coordinates we will prove that v is rotationally symmetric about the origin and that $v_r < 0$ for $r > 0$. Note that the equation is rotationally invariant. For any unit vector $\gamma$ we will prove symmetry of $v$ in the plane $\gamma\cdot x=0$ and $\gamma\cdot\mathrm{grad}v<0$ if $\gamma\cdot x>0$. Performing a rotation we may suppose $\gamma=(1,0,\cdots, 0)$. Observe that from \eqref{eq:4.3'} we find that for suitable constants $C_0$, $R_1$,
+	\begin{equation}\label{eq:4.4}
+		v_1 <0 \quad\text{for}\quad x_1\geq \frac{C_0}{|x|} \quad\text{and} \quad |x|>R_1.
+	\end{equation}
+	As a consequence of \eqref{eq:4.3} and \eqref{eq:4.4} we first derive
+ \begin{lemma}\label{lem:4.1}
+		For any $\lambda >0$, $\exists R=R(\lambda)$ depending only on $\min (1, \lambda)$ (as well as on $v$) such that for $x = (x_1, x^{\prime})$, $y = (y_l, x^{\prime})$ satisfying
+		\[ x_1<y_l,\quad x_1 +y_l \geq  2\lambda,\quad |x|\geq  R, \]
+		we have
+		\begin{equation}\label{eq:4.5}
+			v(x) > v(y). 
+		\end{equation}
+\end{lemma}
+
+\begin{proof}
+	We shall show that if we have a pair of points $x=(x_1, x^{\prime}), y=(y_1,y^{\prime})$ with $|x| \geq  R_1$; $y_l >x_1, y_l +x_1 \geq  2\lambda$, and for which the inequality opposite to \eqref{eq:4.5} holds, i.e.,
+	\begin{equation}\tag{4.5$^{\prime}$}\label{eq:4.5'}
+		v(x) \leq  v(y), 
+	\end{equation}
+	then necessarily $|x|, |y| <\text{ some }R$ depending only on $\min (1, \lambda)$. Note that $|y| > |x|$. The proof just involves a bit of tedious calculation using \eqref{eq:4.3}, \eqref{eq:4.4}. We will use $C$, $C_1$ etc. to denote various constants independent of $\lambda$, $x$ and $y$. From \eqref{eq:4.3} we have (using summation convention)
+	\begin{equation}\label{eq:4.6}
+		a_0\left( \frac{1}{|x|^m} - \frac{1}{|y|^m} \right) \leq  a_{ij}\left( \frac{y_iy_j}{|y|^{m+4}} - \frac{x_ix_j}{|x|^{m+4}} \right) + C_1 ( |x|^{-m-3}+|y|^{-m-3} ) \leq  C|x|^{-m-2}
+	\end{equation}
+	Observe that for $p \geq  1$, since $|y|>|x|$,
+	\begin{equation}\label{eq:4.7}
+		\frac{1}{|x|^p} - \frac{1}{|y|^p} \geq  \frac{1}{|x|^{p-1}} \left(\frac{1}{|x|}-\frac{1}{|y|}\right).
+	\end{equation}
+	As a first consequence of \eqref{eq:4.6} we find then
+ 	\[ \frac{1}{|x|^{m-1}} \left(\frac{1}{|x|}-\frac{1}{|y|}\right) \leq  \frac{1}{|x|^m} - \frac{1}{|y|^m} \leq  \frac{C}{|x|^{m+2}} \]
+	so that
+	\[ |y|-|x|\leq  C\frac{|y|}{|x|^2} \leq C\left( \frac{|y|-|x|}{|x|^2} + \frac{1}{|x|} \right). \]
+	Hence if $C|x|^{-2}\leq \dfrac{1}{2}$ we find
+	\begin{equation}\label{eq:4.8}
+		|y|-|x|\leq \frac{2C}{|x|} \quad\text{and}\quad|y|\leq 2|x|.
+	\end{equation}
+	Inequality \eqref{eq:4.8} has been proved assuming $|x|\geq  2C$. We may assume this from now on; for if $|x|\leq  2C$, then since $v(y)\rightarrow0$ as $|y|\rightarrow\infty$, it follows from \eqref{eq:4.5'} that $|y|\leq R$ for some $R$ independent of $\lambda$.
+	We will now improve the estimate \eqref{eq:4.8} by using it in \eqref{eq:4.6}. Returning to \eqref{eq:4.6} we have
+		\[\begin{aligned}
+		a_0\left(\frac{1}{|x|^m} - \frac{1}{|y|^m}\right) \leq &\ a_{11} \left( \frac{y_1^2}{|y|^{m+4}} - \frac{x_1^2}{|x|^{m+4}} \right)\\
+		&+ 2\sum_{j>1} a_{1j} x_j \left( \frac{y_1}{|y|^{m+4}} - \frac{x_1}{|x|^{m+4}} \right)\\
+		&+ \sum_{j,k>1} a_{jk} x_j x_k \left( \frac{1}{|y|^{m+4}} - \frac{1}{|x|^{m+4}} \right)\\
+		&+ C_1 (|x|^{-m-3} + |y|^{-m-3}).
+	\end{aligned}\]
+	As before we may infer that
+	\[\begin{aligned}
+		\frac{1}{|x|^{m-1}} \left(\frac{1}{|x|} - \frac{1}{|y|}\right) \leq &\ C \frac{y_1^2-x_1^2}{|y|^{m+4}} + C|x|^2 \left( \frac{1}{|x|^{m+4}} - \frac{1}{|y|^{m+4}} \right)\\
+		&+ C\frac{y_1-x_1}{|x|^{m+3}} + \frac{C}{|x|^{m+3}}\\
+		\leq &\ C \frac{y_1^2-x_1^2}{|x|^{m+4}} + \frac{C}{|x|^{m+1}}\left(\frac{1}{|x|}-\frac{1}{|y|}\right)\\
+		&+ C\frac{y_1-x_1}{|x|^{m+3}} + \frac{C}{|x|^{m+3}}
+	\end{aligned}\]
+	
+	Using \eqref{eq:4.8} we find easily that
+	\[ |y|-|x|\leq  C\frac{|y|^2-|x|^2}{|x|^3} + C\frac{|y|-|x|}{|x|^2} 
+    + C\frac{y_1-x_1}{|x|^2} + \frac{C}{|x|^2}. \]
+	Multiplying by $|y|+|x|$ and recalling that
+	\begin{equation}\label{eq:4.9}
+		|y|^2-|x|^2 = y_1^2-x_1^2 \geq  2\lambda(y_1-x_1)
+	\end{equation}
+	we find
+	\[ y_1^2-x_1^2 \leq  \frac{C}{|x|^2} (y_1^2-x_1^2) + \frac{C}{|x|} (y_1-x_1) + \frac{C}{|x|} .\]
+	Once again, if $|x|^2> 2C$ -- as we may assume -- it follows that
+	\[ y_1^2-x_1^2 \leq  \frac{C}{|x|} (y_1-x_1) + \frac{C}{|x|}. \]
+	Hence, by \eqref{eq:4.9},
+	\[\left(2\lambda-\frac{C}{|x|}\right)(y_1-x_1) \leq  \frac{C}{|x|}.  \]
+
+	Thus if $2\lambda-C|x|^{-1}\geq \lambda$, i.e.,
+	\begin{equation}\label{eq:4.10}
+		|x|\geq \frac{C}{\lambda}
+	\end{equation}
+	we see that
+	\[y_1-x_1\leq \frac{C}{\lambda|x|}. \]
+	Consequently, since $y_1\geq 2\lambda-x_1$, we find
+	\[2\lambda-2x_1\leq \frac{C}{\lambda|x|}. \]
+	or
+	\[x_1\geq \lambda-\frac{C}{2\lambda|x|}.\]
+	
+	But (see \eqref{eq:4.4} for $C_0$)
+	\[\lambda-\frac{C}{2\lambda|x|}\geq  \frac{C_0}{|x|}\]
+	provided.
+	\begin{equation}\label{eq:4.11}
+		|x|\geq  \frac{C}{\lambda^2} + \frac{C_0}{\lambda}.
+	\end{equation}
+	Thus if \eqref{eq:4.11} and \eqref{eq:4.10} hold we conclude that
+	\[x_1\geq \frac{C_0}{|x|}.\]
+	But then \eqref{eq:4.4} implies that $v$ is strictly decreasing on the straight segment going from $x$ to $y$ -- contradicting \eqref{eq:4.5'}. Thus either \eqref{eq:4.10} or \eqref{eq:4.11} cannot hold and the lemma is proved.
+\end{proof}
+
+As in Sect.~2, for any $\lambda>0$ and for any $x =(x_1,x^{\prime})$,
+we denote by $x^{\lambda}$ its reflection in the plane $x_1 =\lambda$,
+i.e., $x^{\lambda}=(2\lambda-x_1,x^{\prime})$.
+\begin{lemma}\label{lem:4.2}
+	There exists $\lambda_0\geq 1$ such that $\forall\lambda\geq \lambda_0$,
+	\begin{equation}\label{eq:4.12}
+		v(x)>v(x^{\lambda}) \quad\text{if}\quad x_1 <\lambda. 
+	\end{equation}
+\end{lemma}
+\begin{proof}
+	Set $R_1 =\max \{1,R(1) \text{ of Lemma \eqref{lem:4.1}}\}$. By Lemma \eqref{lem:4.1}, if $|x|>R_1$, $\lambda\geq 1$ and $x_1 <\lambda$ we have
+	\begin{equation}\tag{4.12$^{\prime}$}\label{eq:4.12'}
+		v(x) > v(x^{\lambda}).
+	\end{equation}
+	But
+	\[ v(x)\geq  c_0>0 \quad\text{for}\quad |x|\leq  R_1. \]
+	Furthermore for $1 <R_2$ sufficiently large we have
+	\[ v(y)<c_0\quad\text{for}\quad |y|\geq  R_2. \]
+	Thus \eqref{eq:4.12} holds if $\lambda\geq  R_2$ and $|x|\leq  R_1$. Combining this with \eqref{eq:4.12'} we obtain \eqref{eq:4.12} with $\lambda_0 =R_2$. Q.e.d.
+\end{proof}
+
+Lemma 4.2 asserts the desired reflection property \eqref{eq:4.12} for planes 
+$T_{\lambda}:x_1 =\lambda$ with $\lambda$ sufficiently large. 
+Now we may begin our procedure of moving the plane $T_{\lambda}$ by decreasing $\lambda$.
+First we have the analogue of Lemma \ref{lemma:2.2}.
+\begin{lemma}\label{lem:4.3}
+	Assume that for some $\lambda >0$
+	\[ v(x)\geq  v(x^{\lambda}),\quad v(x)\not\equiv v(x^{\lambda})\quad \text{for}\quad x_1<\lambda, \]
+	Then $v(x)>v(x^{\lambda})$ if $x_1 <\lambda$, and
+	\begin{equation}\label{eq:4.13}
+		v_1(x)<0\quad\text{on}\quad T_{\lambda}.
+	\end{equation}
+\end{lemma}
+\begin{proof}
+	The function $w(x)= v(x^{\lambda})$ is also a solution of \eqref{eq:1.8} in $x_1 < \lambda$ 
+  and $w\leq v$ there. Thus the function
+	\[z(x) = w(x)- v(x) \leq 0,\qquad z \not\equiv 0\]
+	satisfies an elliptic equation of the form
+	\[Lw=0\quad \text{in}\quad x_1\leq \lambda\]
+	with $L$ as in \eqref{eq:1.10}, and it achieves its maximum, namely zero, at every point on $T_{\lambda}$. By the maximum principle and Lemma H, $z < 0$ and
+	\[0<z_1 = -2v_1\quad\text{on}\quad T_{\lambda}.\]
+	The lemma is proved.
+\end{proof}
+\begin{lemma}\label{lem:4.4}
+	The set of positive $\lambda$ for which \eqref{eq:4.12} holds is open.
+\end{lemma}
+\begin{proof}
+	Suppose \eqref{eq:4.12} holds for $\lambda=\bar{\lambda}>0$. 
+  Set $\bar{R} =R(\bar{\lambda}/2)$ of Lemma \ref{lem:4.1}; 
+  then \eqref{eq:4.12} holds for $\lambda\geq \bar{\lambda}/2$ provided $|x| >\bar{R}$. 
+  We have only to consider $|x|<\bar{R}$. 
+  If \eqref{eq:4.12} did not hold for all $\lambda$ in some neighbourhood of $\bar{\lambda}$ 
+  there would be a sequence $\{x_j\}$, $j = 1, 2,\ldots$ in $|x_j|\leq  R$ 
+  and a sequence $\lambda^j\rightarrow\bar{\lambda}$, $\lambda^j\geq \bar{\lambda}/2$, 
+  with $x_1^j<\lambda^j$ and
+	\begin{equation}\label{eq:4.14}
+		v(x^j) \leq  v(x^{j\bar{\lambda}^j}) . 
+	\end{equation}
+	Then a subsequence, which we still call $x^j$, converges to some $x$ in $|x|\leq  R$ and
+	\[v(x) \leq  v(x^{\bar{\lambda}}).\]
+	In view of \eqref{eq:4.12} it follows that $x_1 =\bar{\lambda}$. But then from \eqref{eq:4.14} we must have
+	\[v_1(x)\geq 0\]
+	-- contradicting Lemma \ref{lem:4.3}. Q.e.d.
+\end{proof}
+From Lemmas \ref{lem:4.2}, \ref{lem:4.4} and \ref{lem:4.3} we may conclude that \eqref{eq:4.12} and \eqref{eq:4.13} hold for all $\lambda$ in some \textit{maximal} open interval $0\leq  \lambda_1 < \lambda < \infty$. In particular we also have
+\begin{equation}\label{eq:4.15}
+	v_1(x)<0 \quad\text{for}\quad x_1>\lambda_1. 
+\end{equation}
+In addition, by continuity
+\begin{equation}\label{eq:4.16}
+	v(x)>v(x^{\lambda_1}\quad \text{if}\quad x_1 <\lambda_1 .
+\end{equation}
+Corresponding to the direction $\gamma$ which we took to be $(1,0,\cdots,0)$, we have found a maximal open interval
+\[0\leq \lambda_1<\lambda<\infty\]
+such that the reflection property \eqref{eq:4.12} holds for all $\lambda$ in the interval.
+
+Suppose for some vector $\lambda$, which we may take as $(1,0,\cdots,0)$, $\lambda_1(\gamma)>0$. By Lemma \ref{lem:4.3} we either have
+\[ v(x)\equiv v(x^{\lambda_1}),\quad\text{for}\quad x_1<\lambda_1,\]
+or else property \eqref{eq:4.12} holds for $\lambda_1$. The former cannot occur, by Lemma \ref{lem:4.1}, while the latter cannot, by Lemma \ref{lem:4.4} and the definition of $\lambda_1$. Hence for all unit vectors $\gamma$, $\lambda_1(\gamma)=0$. It follows from \eqref{eq:4.16} that $v$ is symmetric about each plane $\gamma\cdot x=0$. Hence it is radially symmetric about the origin, as was to be proved.
+The remainder of the theorem follows from \eqref{eq:4.15}.
+
+\noindent
+\textit{Remark. }Theorem \ref{thm:4} yields rotational symmetry of our solution. If we wish to prove symmetry in only one direction, say with respect to $x_1$ then it is clear that the argument extends to more general equations than \eqref{eq:1.8}. For example we may
+consider elliptic equations of the form (here $\alpha,\beta$ range from 2 to $n$)
+\begin{equation}\label{eq:4.17}	F(x_2,\cdots,x_n,v,v_1^2,v_2,\cdots,v_n,v_{11},v_{\alpha\beta})=0
+\end{equation}
+\begin{theoremp}{thm:4}\label{thm:4'}
+  Let $v > 0$ be a $C^2$ solution of \eqref{eq:4.17} in $\mathbb{R}^n$ 
+  with $F$, $F_v$, $F_{v_1^2}$, $\ldots$, $F_{v_{\alpha\beta}} \in C$ and $v$ satisfying \eqref{eq:1.9}. 
+  Then $v$ is symmetric with respect to the plane $x_1 = - \frac{a_1}{ma_0}$ 
+  and $v_1<0$ for $ x_1>-\frac{a_1}{ma_0}$.
+\end{theoremp}

@@ -1,0 +1,533 @@
+\section{Principal results and Proofs}
+
+\setcounter{theorem}{0}
+\counterwithin{theorem}{section}
+
+Theorems \ref{thm:1} and \ref{thm:2} follow from a single result which,
+for simplicity, we first present in a special form. The more general form is presented in
+Theorem \ref{thm:2.1prime}.
+
+Consider a solution $u\in C^2(\Omega)$ of
+\begin{equation}\label{eq:2.1}
+  \Delta u + b_1(x)u_{x_1} + f(u) = 0 \quad \text{in } \Omega
+\end{equation}
+with $b_1\in C(\overline{\Omega})$ and $f\in C^1$.
+Here $\Omega$ is bounded with smooth boundary $\partial\Omega$;
+for $x\in\partial\Omega$, $v(x)$ is the exterior unit normal.
+
+In our construction of caps in the introduction, let $\gamma$ be the unit vector
+$(1,0,\ldots,0)$ and assume $\max_{x\in\overline{\Omega}} x_1 = \lambda_0$.
+Let $\Sigma = \Sigma_\gamma = \Sigma(\lambda_1)$ be the corresponding maximal cap;
+the corresponding plane $T_{\lambda_1}$ containing part of its boundary is
+\[x_1 = \lambda_1 < \lambda_0.\]
+The reflection of $\Sigma$ in the plane $T_{\lambda_1}$ is called $\Sigma'$.
+
+Concerning the solution $u$ we now require
+
+(a) $u>0$ in $\Omega$, $u\in C^2(\overline{\Omega}\cap\{x_1>\lambda_1\})$,
+and $u=0$ on $\partial\Omega\cap\{x_1>\lambda_1\}$.
+
+Note that no condition on $u$ is required on the rest of the boundary.
+
+For any $x$ in $\Omega$ we use $x^\lambda$ to denote its reflection in the plane
+$T_\lambda : x_1=\lambda$.
+
+\begin{theorem}\label{thm:2.1}
+  Let $u$ be as above, satisfying condition (a) and assume
+  \[b_1(x) \geq 0 \quad \text{in } \Sigma\cup\Sigma'.\]
+  For any $\lambda$ in $\lambda_1 < \lambda < \lambda_0$ we have
+  \begin{equation}\label{eq:2.2}
+    u_{x_1} < 0\quad \text{and} \quad u(x) < u(x^\lambda) \quad \text{for } x\in \Sigma(\lambda).
+  \end{equation}
+  Thus $u_{x_1}<0$ in $\Sigma$. Furthermore if $u_{x_1} = 0$
+  at some point in $\Omega$ on the plane $T_{\lambda_1}$
+  then necessarily $u$ is symmetric in the plane $T_{\lambda_1}$,
+  \begin{equation}\label{eq:2.3}
+    \Omega = \Sigma\cup\Sigma'\cup(T_{\lambda_1}\cap\Omega),
+  \end{equation}
+  and $b_1(x)\equiv 0$.
+\end{theorem}
+
+Theorems 1--3 are immediate consequences.
+
+\begin{proof}[Proof of Theorem 1.]
+  Applying Theorem \ref{thm:2.1} we see that
+  \[u_{x_1} < 0\quad\text{if}\quad x_1>0\]
+  for any choice of our $x_1$ axis. It follows that $u_{x_1}>0$ if $x_1<0$.
+  Hence $u_{x_1} = 0$ on $x_1=0$.
+  By the last assertion of Theorem \ref{thm:2.1} we infer that $u$ is symmetric in $x_1$.
+  Since the direction of the $x_1$ axis is arbitrary it follows that $u$
+  is radially symmetric and $u_r<0$ for $0<r<R$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem 2.]
+  We may again choose any direction $\gamma$ as positive $x_1$ axis.
+  It follows from Theorem \ref{thm:2.1} that 
+  in the corresponding maximal cap $\Sigma_\gamma$,
+  $\gamma\cdot\nabla u<0$. 
+  The union of these maximal caps is the region $(R'+R)/2< |x| <R$.
+
+  Suppose for some point $y$ with $|y| = (R'+R)/2$, $u_r(y)=0$.
+  Then with $\gamma = y/|y|$ we conclude from the last assertion of Theorem \ref{thm:2.1}
+  that $\Omega = \Sigma_\gamma \cup \Sigma_{\gamma}'$ which is impossible.
+
+  The proof also shows that for $|x| > (R'+R)/2$, $\nu\cdot\nabla u(x)<0$
+  for any vector $\nu$ making an angle less than $(\pi/2-\theta)$ with the vector $x$
+  (see Fig.~\ref{fig:2}).
+\end{proof}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width = .8\textwidth]{figure/fig2.pdf}
+  \caption{}
+  \label{fig:2}
+\end{figure}
+
+\begin{proof}[Proof of Theorem 3.]
+  There are sequences $\varepsilon_n, \delta_n\to 0$
+  such that $u(x) > u(1-\varepsilon_n)$ on the interval $\delta_n < x < 1-\varepsilon_n$.
+  Applying Theorem~\ref{thm:2.1} to $u(x) - u(1-\varepsilon_n)$ on that interval
+  and then letting $n\to\infty$ we easily obtain the result.
+\end{proof}
+
+
+For convenience we write $u_{x_i} = u_i$ etc.
+Before proving Theorem~\ref{thm:2.1} we first apply the maximum principle 
+and Lemma H to derive two preliminary results.
+
+\begin{lemma}\label{lemma:2.1}
+  Let $x_0\in\partial\Omega$ with $\nu_1(x_0)>0$.
+  For some $\varepsilon>0$ assume $u$ is a $C^2$ function in $\overline{\Omega}_{\varepsilon}$
+  where $\Omega_\varepsilon = \Omega\cap\{|x-x_0|<\varepsilon\}$,
+  $u>0$ in $\Omega$ and $u=0$ on $\partial\Omega\cap\{|x-x_0|<\varepsilon\}$.
+  Then $\exists\delta>0$ such that in $\Omega\cap\{|x-x_0|<\delta\}$, $u_{x_1}<0$.
+\end{lemma}
+
+\begin{proof}
+  Since $u>0$ in $\Omega$, necessarily, $u_\nu \leq 0$, 
+  on $\partial\Omega\cap\{|x-x_0|<\varepsilon\}=S$, and hence $u_{x_1}\leq 0$ on $S$,
+  for $\nu_1>0$ everywhere there, which we may assume, by decreasing $\varepsilon$
+  if necessary.
+
+  If the lemma were false there would be a sequence of points $x^j\to x_0$,
+  with $u_1(x^j)\geq 0$. For $j$ large the interval in the $x_1$ direction
+  going from $x^j$ to $\partial\Omega$ hits $S$ at a point where $u_1<0$.
+  Consequently, by the theorem of the mean,
+  \[u_1(x_0)=0\quad\text{and}\quad u_{11}(x_0) = 0.\]
+  Suppose $f(0)\geq 0$. Then in $\Omega_\varepsilon$, $u$ satisfies
+  \begin{equation}\label{eq:2.1hat}
+    \Delta u + b_1u_{x_1} + f(u) - f(0) \leq 0 \tag{$\widehat{2.1}$}
+  \end{equation}
+  or, by the theorem of the mean, for some function $c_1(x)$,
+  \[\Delta u + b_1u_1 + c_1(x)u \leq 0.\]
+  Applying Lemma H to the function $-u$ we find
+  \[u_\nu(x_0) < 0, \quad \text{and so } u_1(x_0) < 0\]
+  a contradiction. So suppose $f(0)<0$.
+  From \eqref{eq:2.1} we see that at $x_0$, $\nabla u = 0$
+  and $\Delta u = -f(0)$. But then it follows that
+  \[u_{x_ix_j} = -f(0)v_iv_j\quad\text{at } x_0.\]
+  In particular $u_{11}(x_0)>0$---again a contradiction. The lemma is proved.
+\end{proof}
+
+\begin{lemma}\label{lemma:2.2}
+  Assume that for some $\lambda$ in $\lambda_1\leq \lambda<\lambda_0$ we have
+  \begin{equation}\label{eq:2.2prime}
+    u_1(x)\leq 0\quad\text{and}\quad u(x)\leq u(x^\lambda)\quad
+    \text{but}\quad u(x)\not\equiv u(x^\lambda)\quad \text{in } \Sigma(\lambda).
+    \tag{$2.2'$}
+  \end{equation}
+  Then $u(x)<u(x^\lambda)$ in $\Sigma(\lambda)$ and $u_1(x)<0$ on $\Omega\cap T_\lambda$.
+\end{lemma}
+
+\begin{proof}
+  In $\Sigma'(\lambda)=$ the reflection of $\Sigma(\lambda)$ in the plane $T_\lambda$,
+  consider
+  \[v(x) = u(x^\lambda);\]
+  note $x^\lambda\in\Sigma(\lambda)$. In $\Sigma'(\lambda)$ $v$ satisfies the equation
+  \[\Delta v - b_1(x^\lambda)v_1 + f(v) = 0\]
+  and $v_1\geq 0$. If we substract \eqref{eq:2.1} we find
+  \begin{equation}\label{eq:2.4}
+    \Delta(v-u) + b_1(x)(v-u)_1 + f(v) - f(u)
+    = (b_1(x^\lambda) + b_1(x))v_1\geq 0
+  \end{equation}
+  in $\Sigma'(\lambda)$, since $v_1\geq 0$ and $b_1\geq 0$.
+  Using the theorem of the mean in integral form we see that in $\Sigma'(\lambda)$
+  \[w(x)\equiv v(x) - u(x) \leq 0\quad w\not\equiv 0,\]
+  and
+  \begin{equation}\label{eq:2.1tilde}
+    \Delta w(x) + b_1(x)w_1 + c(x)w \geq 0 \tag{$\widetilde{2.1}$}
+  \end{equation}
+  for some function $c(x)$. Since $w=0$ on $T_\lambda\cap \Omega$ it follows
+  from the maximum principle and Lemma H that $w<0$ in $\Sigma'(\lambda)$
+  and $w_1>0$ on $T_\lambda$.
+  But on $T_\lambda$, $w_1=v_1-u_1 = -2u_1$,
+  and the lemma is proved.
+\end{proof}
+
+\begin{proof}[Proof of Theorem 2.1]
+  It follows from Lemma \ref{lemma:2.1} that for $\lambda$ close to $\lambda_0$,
+  $\lambda<\lambda_0$, \eqref{eq:2.2} holds.
+  Decrease $\lambda$ until a critical value $\mu\geq\lambda_1$ is reached,
+  beyond which it no longer holds. Then \eqref{eq:2.2} holds for $\lambda>\mu$,
+  while for $\lambda=\mu$ we have by continuity,
+  \[u_1(x)<0\quad\text{and}\quad u(x)\leq u(x^\mu)\quad\text{for } x\in\Sigma(\mu).\]
+
+  We will show that $\mu=\lambda_1$. Suppose $\mu>\lambda_1$.
+  For any point $x_0\in \partial\Sigma(\mu)\setminus T_\mu$ we have
+  $x_0^\mu\in\Omega$. Since $0=u(x_0)<u(x_0^\mu)$ we see that $u(x)\not\equiv u(x^\mu)$
+  in $\Sigma(\mu)$. We may therefore apply Lemma~\ref{lemma:2.2} and conclude that
+  \[u(x) < u(x^\mu)\quad\text{in } \Sigma(\mu)\quad\text{and}\quad
+    u_1<0\quad\text{on } \Omega\cap T_\mu.\]
+  Thus \eqref{eq:2.2} holds for $\lambda=\mu$. Since $u_1<0$
+  on $\Omega\cap T_\mu$ we see with the aid of Lemma \ref{lemma:2.1}
+  that for some $\varepsilon>0$
+  \begin{equation}\label{eq:2.5}
+    u_1 < 0\quad\text{in } \Omega\cap\{x_1 > \mu-\varepsilon\}.
+  \end{equation}
+  
+  From our definition of $\mu$ we must then have the following situation.
+  For $j=1,2,\ldots$ there is a sequence $\lambda^j$,
+  \[\lambda < \lambda^j \nearrow \mu,\]
+  and a point $x_j$ in $\Sigma(\lambda^j)$ such that
+  \[u(x_j) \geq u(x_j^{\lambda^j}).\]
+  A subsequence which we still call $x_j$ will converge to some point $x$
+  in $\overline{\Sigma(\mu)}$;
+  then $x_j^{\lambda^j}\to x^\mu$ and $u(x)\geq u(x^\mu)$.
+  Since \eqref{eq:2.2} holds for $\lambda=\mu$ we must have $x\in \partial\Sigma_\mu$.
+  If $x$ is not on the plane $T_\mu$ then $x^\mu$ lies in $\Omega$ and consequently
+  \[0 = u(x) < u(x^\mu)\]
+  which is impossible. Therefore $x\in T_\mu$ and $x^\mu=x$.
+  On the other hand, for $j$ sufficiently large, the straight segment joining $x_j$
+  to $x_j^{\lambda^j}$ belongs to $\Omega$ and by the theorem of the mean
+  it contains a point $y_j$ such that
+  \[u_1(y_j) \geq 0.\]
+  Since $y_j\to x$ we obtain a contradiction to \eqref{eq:2.5}.
+  Thus we have proved that $\mu=\lambda_1$
+  and that \eqref{eq:2.2} holds for $\lambda>\lambda_1$.
+  By continuity, $u_1(x)\leq 0$ and $u(x)\leq u(x^{\lambda_1})$ in $\Sigma$.
+
+  To complete the proof of the theorem suppose $u_1=0$ at some point in $\Omega$
+  on $T_{\lambda_1}$. By Lemma~\ref{lemma:2.2} we infer that
+  \[u(x) \equiv u(x^{\lambda_1})\quad\text{in } \Sigma.\]
+  Since $u(x)=0$ if $x\in\partial\Omega$ and $x_1\geq\lambda_1$
+  it follows that $u(x^{\lambda_1})=0$ at the reflected point and thus \eqref{eq:2.3} holds. 
+  Finally, suppose $b_1>0$ at some point $x\in\Omega$ (we may take $x\notin T_{\lambda_1}$).
+  Then from the Eq.~\eqref{eq:2.1} and the (now proved) symmetry of the solution in the plane
+  $T_{\lambda_1}$ we see that
+  \[b_1(x)u_1(x) = b_1(x^{\lambda_1})u_1(x^{\lambda_1}).\]
+  If $x\in\Sigma$, the left-hand side is negative while the right-hand side is
+  nonnegative---impossible; similarly if $x\in\Sigma'$.
+\end{proof}
+
+\noindent
+2.3. \emph{Remark 1.} (This was pointed out to us by Spruck.)
+In some equations of interest, of the form \eqref{eq:1.1},
+the function $f(u)$ is not in $C^1$. For example, in a certain plasma problem,
+$f(u)=(u-1)^+ =$the positive part of $(u-1)$. In case $f$ is monotone increasing
+the result of Theorem~\ref{thm:1} still holds i.e.~we have, more generally:
+
+{\itshape The results of Theorems \ref{thm:2.1} and \ref{thm:1},
+and of Lemmas \ref{lemma:2.1}, \ref{lemma:2.2} hold if $f(u)= f_1(u) + f_2(u)$
+where $f_1\in C^1$ and $f_2$ is monotone increasing. In particular the results hold if
+$f$ is locally Lipschitz continuous.}
+
+The proofs are the same as before. We have only to verify that Lemmas \ref{lemma:2.1},
+\ref{lemma:2.2} continue to hold; it was only there that the $C^1$ hypothesis on $f$ was used.
+In the proof of Lemma~\ref{lemma:2.1} the $C^1$ hypothesis was used in the argument
+assuming $f(0)\geq 0$. In that case in place of \eqref{eq:2.1hat} we have
+\[\Delta u + b_1u_1 + f_1(u) - f_1(0) \leq f_2(0) - f_2(u) \leq 0\]
+since $f_2$ is increasing, and the argument proceeds as before.
+Similarly in the proof of Lemma~\ref{lemma:2.2} we have from \eqref{eq:2.4}
+\[\Delta(v-u) + b_1(x)(v-u)_1 + f_1(v) - f_1(u) \geq f_2(u) - f_2(v) \geq 0\]
+and the proof proceeds as before.
+In fact if $f$ is monotone increasing (i.e., we take $f_1=0$)
+we need only the usual form of the Hopf boundary lemma.
+
+It is natural to ask whether Theorems \ref{thm:1} and \ref{thm:2.1} hold 
+if the condition $u > 0$ in $\Omega$ is replaced by the condition: $u \geq 0, u \not\equiv 0$
+in $\Omega$. This is not the case in general as we see from the example after Theorem~\ref{thm:3}. 
+If however $f(0)\geq 0$ in both theorems, then $u\geq 0, u\not\equiv O$ in $\Omega$ 
+implies $u>0$ in $\Omega$. For, with $f=f_1 + f_2$, $f_1\in C^1$, $f_2$ increasing,
+we have, from \eqref{eq:2.1},
+\[\Delta u + b_1u_1 + f_1(u) - f_1(0)
+  = f_2(0) - f_2(u) - f(0) \leq 0,\]
+and the results follow with the aid of the maximum principle.
+In particular if $f$ is locally Lipschitz continuous, $f(0) \geq 0$,
+and $u\geq 0, u\not\equiv 0$ in $\Omega$ then the results of Theorem \ref{thm:2.1} hold.
+If the condition of Lipschitz continuity is weakened to H\"older continuity
+the results need \emph{not} hold.
+For example, if $p>2$, the function $w(x)=(1-|x|^2)^p$ in $|x|\leq 1$,
+$w=0$ in $|x|>1$, is in $C^2(\mathbb{R}^n)$ and satisfies \eqref{eq:1.1} with
+\[f(w) = -2p(p-2)w^{1-2/p} + 2p(n+2p-2)w^{1-1/p}.\]
+The function $f$ is H\"older continuous with exponent $1-2/p$, and $f(0)=0$.
+However the function
+\[u(x) = w(x) + w(x-x_0),\]
+with some fixed $x_0$ satisfying $|x_0|=3$, satisfies \eqref{eq:1.1}
+in $|x|<5$ with the same $f$.
+Obviously $u$ does not satisfy the conclusions of Theorem~\ref{thm:1}.
+
+\noindent
+2.4. Theorem \ref{thm:2.1} extends to a class of nonlinear elliptic second order equations.
+With $\Omega$, $\Sigma(\lambda)$ etc.\! as before, consider a $C^2$ solution $u$
+in $\overline{\Omega}$ of such an equation
+\begin{equation}\label{eq:2.1prime}
+  F(x, u, u_1, \ldots, u_n, u_{11}, \ldots, u_{nn}) = 0 \tag{$2.1'$}
+\end{equation}
+which is elliptic, i.e., for positive constants $m,M$
+\[M|\xi|^2 \geq F_{uij}\xi_i\xi_j \geq m|\xi|^2.\]
+The function $F(x, u, p_i, p_{jk})$ is assumed to be continuous and to have continuous first
+derivatives with respect to $u$, $p_i$ and $p_{jk}$ for all values of these last arguments,
+and $x\in\overline{\Omega}$, and to satisfy the following conditions:
+
+(b) On $\partial\Omega\cap\{x_1>\lambda_1\}$ the function $g(x) = F(x,0,\ldots,0)$
+satisfies
+\[g(x)\geq 0\ \forall x, \quad \text{or} \quad
+  g(x)<0\ \forall x.\]
+
+(c) For every $\lambda$ in $\lambda_1\leq\lambda<\lambda_0$
+and for $x\in\Sigma(\lambda)$, and all values of the arguments $u$, $p_i$,
+$p_{jk}$ with $u>0$, $p_1<0$,
+\begin{equation}\label{eq:2.6}
+  F(x^\lambda, u, -p_1, p_2, \ldots, p_n, p_{11}, -p_{1\alpha}, \ldots,
+    p_{\beta\gamma}) \geq F(x,u,p_1,p_{\alpha},p_{ij}).
+\end{equation}
+Here $i,j$ range from $1$ to $n$ and $\alpha$, $\beta$, $\gamma$
+from $2$ to $n$.
+Note that condition (b) is automatic in case $F$ is independent of $x$.
+Furthermore, in the first case in condition (b),
+it follows from condition (c) that $g(x)\geq 0$
+for $x$ in a neighborhood in $\Omega$ of $\partial\Omega\cap\{x_1>\lambda_1\}$%
+---because $g(x)$ is a decreasing function of $x_1$ there.
+
+\begin{theoremp}{thm:2.1}\label{thm:2.1prime}
+  Let $u$ satisfy condition (a), and $F$ satisfy conditions (b) and (c).
+  Then \eqref{eq:2.2} holds, and $u_1<0$ in $\Sigma$.
+  Furthermore if $u_1=0$ at some point in $\Omega$ on $T_{\lambda_1}$ then,
+  necessarily, $u$ is symmetric in the plane $T_{\lambda_1}$ and \eqref{eq:2.3} holds.
+\end{theoremp}
+
+The proof of this is exactly the same as that of Theorem~\ref{thm:2.1},
+in particular Lemmas \ref{lemma:2.1}, \ref{lemma:2.2} hold,
+and is left to the reader. As an immediate application we have the following symmetry result:
+
+\begin{corollary}\label{cor:1}
+  With $\Omega$ as before, suppose that $\lambda_1=0$,
+  and that $\Omega$ is symmetric about the plane $x_1=0$.
+  Suppose our solution $u>0$ in $\Omega$, $u=0$ on $\partial\Omega$.
+  Assume $F$ satisfies condition (b) and, in place of condition (c), conditions
+  \begin{enumerate}[label = $(\mathrm{c}_{\arabic*}')$]
+    \item $F$ is symmetric in $x_1$, and decreasing in $x_1$ for $x_1>0$.
+    \item $F(x,u,-p_1,p_{\alpha},p_{11},-p_{1\alpha}, p_{\beta\gamma})
+      \equiv F(x,u,p_1,p_\alpha,p_{ij})$ if $u>0$
+  \end{enumerate}
+  Then $u$ is symmetric in $x_1$ and $u_{x_1}<0$ for $x_1>0$.
+\end{corollary}
+
+\begin{proof}
+  Conditions $(\mathrm{c}_1')$, $(\mathrm{c}_2')$ imply condition (c)
+  since, by $(\mathrm{c}_1')$, for $\lambda_1\leq\lambda$,
+  the left-hand side of \eqref{eq:2.6} $\geq$ the left-hand side of $(\mathrm{c}_2')$.
+  By Theorem \ref{thm:2.1prime} we find
+  \[u_1(x) < 0\quad \text{and} \quad u(-x_1, x') \geq u(x_1,x')
+    \quad\text{for } x_1>0.\]
+  If we replace $x_1$ by $-x_1$, i.e., reverse the $x_1$-axis,
+  we may apply the theorem again and obtain just the opposite inequalities.
+  Here $x' = (x_2,\ldots, x_n)$.
+\end{proof}
+
+\noindent
+2.5. We also obtain generalizations of Theorem \ref{thm:1} and \ref{thm:2}.
+
+\begin{theoremp}{thm:1}\label{thm:1prime}
+  Theorem \ref{thm:1} and \ref{thm:2} hold for $f=f(r,u)$
+  depending also on $r$, with $f$, $f_u$ continuous, provided $f$ is decreasing in $r$.
+\end{theoremp}
+
+One might ask whether positive solutions $u$ in a ball $|x|<R$,
+vanishing on the boundary, of
+\[\Delta u + f(r,u) = 0\]
+are necessarily spherically symmetric---even if $f$ is not decreasing in $r$.
+This is not the case in general. For example, let $w$ be an eigenfunction of
+\[\Delta w + \lambda w = 0,\quad w = 0\quad \text{on } |x|=R,\]
+which is not spherically symmetric. Then for $\varepsilon>0$ small, the function
+$u = R^2 - |x|^2 + \varepsilon w$, is positive in $|x|<R$,
+vanishing on the boundary and satisfies
+\[\Delta u + \lambda u + \lambda(r^2-R^2) + 2n = 0\quad\text{in } |x|<R;\]
+but $u$ is not spherically symmetric.
+
+Using Theorem \ref{thm:2.1prime} one may prove further symmetries.
+The following, whose proof is left to the reader, is an example.
+See also Remark 2 at the end of Sect.~3.
+
+Let $\Omega$ be the unit ball in $\mathbb{R}^{2n}$ and denote the points in $\mathbb{R}^{2n}$
+by $(x,y)$, $x,y\in \mathbb{R}^n$.
+
+\begin{corollary}\label{cor:2}
+  Let $u\in C^2(\overline{\Omega})$, $u>0$ in $\Omega$, be a solution of
+  \[\Delta u + f(x,y,u) = 0\quad\text{in } \Omega,\qquad u = 0\quad\text{on } \partial\Omega.\]
+  Assume $f$ and $f_u$ are continuous in $\overline{\Omega}\times\{u\geq 0\}$ and
+  \begin{enumerate}[(i)]
+    \item $f(x,y,0) \geq 0$ everywhere on $\partial\Omega$,
+      or $f(x,y,0)<0$ everywhere on $\partial\Omega$.
+    \item $f(x,y,u) = f(y,x,u)$.
+    \item For every point $(x,x)\in\Omega$ and for every vector $z\in \mathbb{R}^n$
+      and $\forall u>0$, the function $f(x+sz, x-sz, u)$ as a function of $s>0$
+      is nonincreasing (wherever defined).
+  \end{enumerate}
+  Then $u(x,y) = u(y,x)$ and for $x, z\in \mathbb{R}^n$, $|x|<1/\sqrt{2}$
+  \[\frac{d}{ds} u(x+sz, z-sz) < 0\]
+  for
+  \[0 < s < \frac{1}{|z|}\sqrt{\frac12 - |x|^2}.\]
+\end{corollary}
+
+The function $f(x, y, u) = g(|x-y|, u)$ with $g(t, u)$ decreasing in $t$,
+for $t>0$, satisfies the conditions (ii) and (iii).
+
+Theorem \ref{thm:1prime} admits extension to still more general rotationally symmetric equations. 
+In particular, if $\Omega$ is rotationally symmetric with respect to some of the $x$ variables, 
+say $(x_1,\ldots,x_k)$ and the Eq.~\eqref{eq:2.1prime} also has this property,
+then one may prove an extension of Theorem~\ref{thm:2.1prime} showing,
+under suitable hypotheses, that $u$ is a function of $(\varrho, x_{k+1}, \ldots, x_n)$
+for $\varrho = \sum_1^k x_g^2$ and $u_{\varrho}<0$ for $\varrho>0$.
+\vspace*{5pt}
+\noindent
+2.6. We also have the following extension of Theorem \ref{thm:3}.
+
+\begin{theoremp}{thm:3}\label{thm:3prime}
+  Let $u$ be as in Theorem \ref{thm:3} but satisfying a more general equation
+  than \eqref{eq:1.3}:
+  \[u'' + f(x,u,u') = 0\quad\text{on } 0<x\leq 1.\]
+  Here $f(x,u,p)$, $f_u$ and $f_p$ are continuous.
+  Then $u'(x)<0$ for $\frac12 < x < 1$ provided $f$ satisfies
+  \begin{equation}\label{eq:2.6prime}
+    f(y,u,-p) \geq f(x,u,p) \tag{$2.6'$}
+  \end{equation}
+  whenever $u>u(1)$, $p\leq 0$, and $y+x>1$, $y<x$.
+  Furthermore if $u'(\frac12) = 0$ then $u$ is symmetric about $x = \frac12$.
+\end{theoremp}
+
+The following is a simple consequence:
+
+
+\begin{theorempp}{thm:3}
+  Let $u\in C^2(\mathbb{R}^1)$ be a positive function satisfying
+  \[u'' + f(u,u') = 0\quad\text{on } \mathbb{R}^1\]
+  with $f\in C^1$ and $f(u,p) = f(u,-p)$ for $u>0$.
+  If $u(x)\to 0$ as $x\to \pm\infty$ and $u$ assumes its maximum at the origin,
+  then $u$ is symmetric in $x$ and $u'(x)<0$ for $x>0$.
+\end{theorempp}
+
+\noindent
+2.7. Here is another application of Theorem \ref{thm:2.1} with a novel conclusion.
+
+\begin{corollary}\label{cor:3}
+  Let $\Omega$ be a convex domain which is close to a ball $|x|<R$
+  in the sense that their boundaries are close in the $C^2$ topology.
+  In $\Omega$ let $u$ be a positive solution of
+  \begin{equation}\label{eq:2.7}
+    \Delta u + f(u) = 0,\qquad u=0\quad \text{on }\partial\Omega.
+  \end{equation}
+  Then all stationary points of $u$ in $\Omega$, in particular wherever $u$ takes its maximum,
+  lie in a small neighbourhood of the origin.
+\end{corollary}
+
+\begin{proof}
+  According to Theorem \ref{thm:2.1} $u$ has no stationary point in any maximal cap.
+  Their union covers all of $\Omega$ except for a small region about the origin.
+\end{proof}
+
+This result suggests the following:
+\medskip
+
+\noindent
+\textit{Problem}: Suppose $u>0$ is a solution of \eqref{eq:2.7}
+in a bounded domain $\Omega$ in $\mathbb{R}^n$, $u=0$ on $\partial\Omega$,
+say $u\in C^2(\overline{\Omega})$. Is there some $\varepsilon>0$
+depending only on $\Omega$ (i.e., independent of $f$ and $u$) such that
+$u$ has no stationary point in an $\varepsilon$-neighborhood of $\partial\Omega$?
+
+This is true for $n=2$ in case $f(u)\geq 0$ for $u\geq 0$,
+but for $n>2$ the problem is open.
+
+\begin{proof}
+  Given any boundary point $x_0$ of $\Omega$ we will show that there is a neighbourhood
+  of it in $\Omega$, determined solely by the geometry, which contains no stationary point of $u$.
+  The desired result then follows. Let $D$ be a closed disc touching $\overline{\Omega}$
+  only at the point $x_0$. For convenience we suppose it is the unit disc with centre at
+  the origin.
+
+  We perform a reflection in the unit circle
+  \[x\longmapsto y = \frac{x}{|x|^2}\]
+  and set
+  \[u(x) = v(y).\]
+  The image $\widetilde{\Omega}$ of $\Omega$, lies inside $D$, and $\overline{\widetilde{\Omega}}$
+  touches the boundary only at $x_0$.
+  A simple calculation shows that in $\widetilde{\Omega}$, $v(y)$ satisfies
+  \begin{equation}\label{eq:2.7prime}
+    \Delta v + |y|^{-4}f(v) = 0; \tag{$2.7'$}
+  \end{equation}
+  for $n>2$ the equation has additional terms.
+
+  Let $\Sigma = \Sigma_{x_0}$ be the maximal cap of $\widetilde{\Omega}$
+  corresponding to the direction $x_0$ which we may take to be $(1,0)$.
+  Since $\widetilde{\Omega}$ is strictly convex near $x_0$,
+  $\Sigma$ contains a full neighbourhood of $x_0$ in $\widetilde{\Omega}$.
+  Since $f\geq 0$ for $u\geq 0$, we see that condition (c) of Theorem \ref{thm:2.1prime} 
+  is satisfied. We may therefore apply the theorem and infer that
+  $\nabla v\neq 0$ in $\Sigma$. Hence $\nabla u\neq 0$ in the image of $\Sigma$
+  under the reflection in the unit circle. 
+  This image contains a full neighbourhood of $x_0$ in $\Omega$,
+  in fact it is $\Omega\cap${a circle passing through the origin with some radius $>1$},
+  and the proof is finished.
+\end{proof}
+
+As a direct application of this and Theorem \ref{thm:2},
+whose details we leave to the reader, we have:
+
+\textit{Example}. Suppose $u$ is a positive solution of (here $f$ is locally Lipschitz):
+\[\Delta u + f(u) = 0\quad \text{in } R'\leq |x| \leq R,\quad \text{in } \mathbb{R}^2,\]
+which vanishes on the boundary. Suppose $f(u)\geq 0$ for $u\geq 0$.
+Then all the critical points of $u$ are in the region
+\[\frac{2R'R}{R'+R} < |x| < \frac{R'+R}{2}.\]
+
+\textit{Remark 1$'$}.
+As in Remark 1, the results of Theorem \ref{thm:2.1prime}, Corollary \ref{cor:1}
+(Theorems \ref{thm:1prime}, \ref{thm:3prime} and
+Corollaries \ref{cor:2}, \ref{cor:3} respectively) hold if $F = F_1+F_2$
+($f = f_1 + f_2$ respectively), where $F_1$ ($f_1$) has continuous first derivatives
+with respect to $u$, $p_i$, $p_{jk}$, and $F_2$ ($f_2$) has continuous first derivatives
+with respect to $p_i$, $p_{jk}$, and $F_2$ is monotone increasing in $u$;
+both $F_1$, $F_2$ are to satisfy conditions (b) and (c).
+
+\noindent
+2.8. Theorem \ref{thm:1} yields a positive response to a question put us by C.~Holland.
+For $p > 1$, is the positive solution $u$ of
+\begin{equation}\label{eq:2.8}
+  \Delta u + u^p = 0\quad \text{in } |x|<R,\qquad u = 0\quad \text{on } |x|=R
+\end{equation}
+unique? (The question is still open for other domains.)
+According to Theorem \ref{thm:1} the solution is spherically symmetric, and so satisfies
+\begin{equation}\label{eq:2.9}
+  u_{rr} + \frac{n-1}{r} u_r + u^p = 0, \quad 0<r<R, \quad u_r(0) = 0,
+\end{equation}
+with $u(R) = 0$, and $u_r(r)<0$ for $r>0$. We use
+
+\begin{lemma}\label{lemma:2.3}
+  Let $u$ and $v$ be positive solutions of \eqref{eq:2.9}.
+  For $\lambda^{2/(p-1)} = u(0)/v(0)$, $u(r) = \lambda^{2/(p-1)}v(\lambda r)$.
+\end{lemma}
+
+\begin{proof}
+  The function $w(r)\equiv \lambda^{2/(p-1)}v(\lambda r)$
+  is also a solution of \eqref{eq:2.9} and at $r=0$ it agrees with $u(0)$.
+
+  As solutions of the elliptic Eq.~\eqref{eq:2.8}, $u$ and $w$ are analytic, i.e.,
+  they are analytic functions of $r^2$. 
+  But in fact all their derivatives at $r = 0$ may be computed in terms of $u(0)$
+  showing that $w\equiv u$. For example if we let $r\to 0$ in \eqref{eq:2.9} we find
+  \[nu_{rr}(0) + u^p(0) = 0.\]
+  By further differentiation we may compute all the derivatives, and the lemma is proved.
+\end{proof}
+
+From the lemma it follows easily that the positive solution of \eqref{eq:2.9}
+vanishing at $R$ is unique.
