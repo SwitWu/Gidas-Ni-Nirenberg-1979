@@ -1,6 +1,7 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 \usepackage{amsmath}
+\usepackage{mathrsfs}
 \usepackage{tikz}
 \usepackage[shortlabels]{enumitem}
 \usepackage{caption}
@@ -11,10 +12,12 @@
 \newtheorem*{lemma*}{Lemma}
 \newtheorem{corollary}{Corollary}
 \newtheorem*{corollary*}{Corollary}
+\newtheorem*{MP}{Maximum Principle}
 \theoremstyle{remark}
 \newtheorem{remark}{Remark}
 \counterwithin{equation}{section}
 \DeclareMathOperator{\tr}{tr}
+\renewcommand{\Im}{\operatorname{Im}}
 
 \makeatletter
 \newcommand{\neutralize}[1]{\expandafter\let\csname c@#1\endcsname\count@}

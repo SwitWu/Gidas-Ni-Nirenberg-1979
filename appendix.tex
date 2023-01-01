@@ -1,0 +1,278 @@
+\section*{Appendix. Lemma S and Related Results}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{A.\arabic{equation}}
+\renewcommand{\thelemma}{A.\arabic{lemma}}
+% Page 237--239
+
+One may ask what happens if condition \eqref{eq:1.12} in Lemma S is dropped. The following example shows that it is essential. In $\mathbb{R}^2$, using polar coordinates, the function
+\[w = - r^{\pi/\theta_0} \sin\frac{\pi\theta}{\theta_0}\]
+is negative in the angle $\Omega : 0 < \theta < \theta_0 < \pi/2$, vanishes on the boundary and satisfies $\Delta w=0$. But it does not satisfy \eqref{eq:1.13}; here $a_{ij}\varrho_i\varrho_j<O$ at the origin.
+Since it may be of interest we will also prove a rather primitive extension of Lemma S to the case where condition \eqref{eq:1.12} does not hold. The preceding example is then seen to be typical.
+\begin{lemma}\label{lem:A.1}
+	Let $\Omega$ be as in Lemma S. Let $w\in C^2(\Omega)\cap C(\bar{\Omega})$, with $w <0$ in $\Omega$, $w(0) =0$, be a solution of the elliptic differential inequality \eqref{eq:1.10} in $\Omega$. Assume that the leading coefficients $a_{ij}\in C(\bar{\Omega})$, and satisfy \eqref{eq:1.11}, and that the others are bounded. In place of \eqref{eq:1.12} assume that
+	\begin{equation}\label{eq:A.1}
+		\sum a_{ij}\varrho_i\varrho_j=\mu \sqrt{\sum a_{ij}\varrho_i\varrho_j}\sqrt{a_{ij}\varrho_i\varrho_j}\quad \text{at}\quad 0,
+	\end{equation}
+	for some constant $\mu$ clearly $-1 <\mu < 1$. Set $\theta_0 = \arccos(-\mu)$.
+	
+	Suppose 
+	\[p>\frac{\pi}{\theta_0}.\]
+	Let $\mathscr{C}$ be a closed cone with vertex at the origin such that for some $\varepsilon>0$, $\mathscr{C}\cap\{0 < |x| < \varepsilon\}$ lies in $\Omega$. Then there is a positive constant $\delta$ and a neighbourhood in $\mathscr{C}$ of 0 in which
+	\[w+\delta|x|^p\leq 0.\]
+	In particular if $\mu>0$ we may take $p<2$ and it follows that if $w\in C^1(\bar{\Omega})$ and $\mathrm{grad }w(0)=0$, then on any ray from 0 entering $\Omega$ transversally to the surface, the second derivative of $w$ cannot be bounded near the origin. On the other hand, if $\mu<0$ and $w\in C^r$ in $\bar{\Omega}$\footnote[1]{If $r$ is not an integer this means: $w\in C^{[r]}$, and the derivatives of $w$ of order $[r]$ satisfy a H\"older condition with exponent $r - [ r ]$} near 0, for $r > \pi/\theta_0$, then at least one of the derivatives
+	\[\left(\frac{\partial}{\partial s}\right)^jw,\qquad j=1,\cdots,\left[\frac{\pi}{\theta_0}\right]\]
+ is negative at 0.
+\end{lemma}
+The following may also prove useful.
+\begin{lemma}\label{lem:A.2}
+	Let $\Omega$ be a component of a cone: $\phi=b^{ij}x_ix_j>O$. Assume $w\in C^(\Omega)\cap C(\bar{\Omega})$ near the origin, that $w<0$ in $\bar{\Omega}$ except at the origin, $w(0)=0$, and that $w$ satisfies \eqref{eq:1.10} in $\Omega$. Let $p$ be such that the quadratic form
+	\begin{equation}\tag{A.1$^{\prime}$}\label{eq:A.1prime}
+		Q\equiv (p-1)a_{ij}(0)\phi_i\phi_j + \phi a_{ij}(0) \phi_{ij} >O , \quad x\neq 0,\quad  x\in\bar{\Omega}.
+	\end{equation}
+	Then there is $\delta>0$ and a neighbourhood of $O$ in $\Omega$ in which
+	\[w+\delta\phi^p<0.\]
+\end{lemma}
+
+\noindent
+\textit{Proof of Lemma S. }We first remark that it suffices to prove it in case $c(x)= O$. The general case then follows by the same argument we presented for Lemma H. The case of strict inequality in \eqref{eq:1.12} follows from Lemma \ref{lem:A.1}. So we just consider the case of equality.
+
+We may suppose that $w < 0$ in $\bar{\Omega}\backslash 0$ for we may simply replace the hypersurfaces by spheres tangent to them at 0 and lying, otherwise entirely in $\Omega$.
+
+In the closure $\bar{\Omega}_{\varepsilon}$ of $\Omega_{\varepsilon} = \Omega\cap\{|x|<\varepsilon\}$ we will construct a $C^2$ function $z$ with the properties:
+\begin{equation}\label{eq:A.2}
+	\begin{cases}
+		z\leq  0 \quad\text{on}\quad\varrho=0\quad\text{and on}\quad\varrho=0,\\
+		z(0) = z_s(0) = 0,\quad z_{ss}(0) > 0,
+	\end{cases}
+\end{equation}
+\begin{equation}\label{eq:A.3}
+	Lz\geq  0.
+\end{equation}
+Using such a function the proof is easily carried out. Set
+\[v=w+tz\]
+with $t > 0$ so small that $w + tz \leq  0$ on the part of the boundary of $\bar{\Omega}_{\varepsilon}$ where $|x| = \varepsilon$; recall that $w < 0$ on that compact set. On the other parts of the boundary of $\bar{\Omega}_{\varepsilon}$ we have $v \leq  w$. Thus $v \leq  0$ on the whole boundary of $\bar{\Omega}_{\varepsilon}$. In $\Omega_{\varepsilon}$ we have
+\begin{equation}\label{eq:A.4}
+	Lv\geq 0.
+\end{equation}
+By the maximum principle $v$ achieves its maximum on the boundary -- in particular at the point 0. Thus $v_s(0)\leq 0$ and if $v_s(0)=0$ then $v_{ss}(0)\leq 0$. Now $v_s(0)= w_s(0)$ and $v_{ss}(0) = w_{ss}(0) + tx_{ss}(0) > w_{ss}(0)$, and \eqref{eq:1.13} follows.
+
+After a $C^2$ change of variables we may suppose that the new surfaces are given by $x_1 =0$ and $x_n=0$ and $\Omega$ is in $\{x_1 <0\}\cap\{x_n <0\}$. Condition \eqref{eq:1.12} now takes the form
+\begin{equation}\label{eq:A.5}
+	a_{1n}(0)=0.
+\end{equation}
+
+We proceed in several steps.
+(i) First we make a linear change of variable so that in the new variables we also have
+\begin{equation}\label{eq:A.6}
+	a_{1\alpha}(0)=a_{\alpha n}(0)=0\quad\text{for}\quad l<\alpha<n.
+\end{equation}
+Set
+\[y_1=x_1,\qquad y_n=x_n\]
+\[y_{\alpha} = x_{\alpha} + c_{\alpha}x_1 + d_{\alpha}x_n\]
+with constants $c_{\alpha}, d_{\alpha}$ to be chosen. The boundaries $x_1 =0$, $x_n=0$ become $y_1 =0$, $y_n=0$. Let us compute, using summation convention ($\alpha$, $\beta$, $\gamma$ are summed from 2 to $n-l$):
+\[\begin{aligned}
+	a_{ij}\partial_{x_i}\partial_{x_j} =&\ a_{11}\left( \partial_{y_1} + c_{\alpha} \partial_{y_{\alpha}}  \right) \left( \partial_{y_1} + c_{\beta} \partial_{y_{\beta}}  \right)\\
+	&+ 2a_{1\gamma}\left( \partial_{y_1} + c_{\alpha} \partial_{y_{\alpha}}  \right)\partial_{y_{\gamma}} \\
+	&+ 2a_{1n}\left( \partial_{y_1} + c_{\alpha} \partial_{y_{\alpha}}  \right) \left( \partial_{y_n} + d_{\alpha} \partial_{y_{\alpha}}  \right)\\
+	&+ a_{\alpha\beta} \partial_{y_{\alpha}} \partial_{y_{\beta}} + 2a_{\gamma n} \left(\partial_{y_n} + d_{\alpha} \partial_{y_{\alpha}} \right) \partial_{y_{\gamma}}\\
+	&+ a_{nn}\left( \partial_{y_n} + d_{\alpha} \partial_{y_{\alpha}}  \right) \left( \partial_{y_n} + d_{\beta} \partial_{y_{\beta}}  \right)\\
+	\equiv &\ b_{ij}\partial_{y_i}\partial_{y_j}.
+\end{aligned}\]
+Thus
+\[\begin{aligned}
+	&\left. b_{1n}(0)=a_{1n}(0)=0 \right.\\
+	&\left. \begin{aligned}
+		b_{1\alpha}(0)=&a_{11}(0)c_{\alpha}+a_{1\alpha}(0)\\
+		b_{\alpha n}(0)=&a_{nn}(0)d_{\alpha}+a_{\alpha n}(0)
+	\end{aligned} \right.\qquad \alpha=2,\cdots,n.
+\end{aligned}\]
+We now require that these be zero -- determining the $c_{\alpha}$ and $d_{\alpha}$.
+
+For convenience we will continue to call the new variables $x_j$ and the coefficients of $L$, $a_{ij}$ etc. They now satisfy \eqref{eq:A.6}. In the new coordinates condition \eqref{eq:1.12prime} means that
+\begin{equation}\label{eq:A.7}
+	\partial_{x_{\alpha}} a_{1n}(0) = 0,\qquad 1<\alpha<n.
+\end{equation}
+
+
+
+
+
+
+% Page 240--the end 
+
+(ii) We will now replace $\Omega$ by a slightly smaller region.
+With $k$ to be chosen suitably large, set
+\[\phi = x_1 + k\sum_2^{n-1} x_{\alpha}^2,\]
+\[\psi = x_n + k\sum x_{\alpha}^2.\]
+Consider the smaller region $G = \Omega\cap\{\phi<0\}\cap\{\psi<0\}$.
+In $G$ near $O$ we will use the comparison function
+\begin{equation}\label{eq:A.8}
+  z = gh
+\end{equation}
+with \[g = e^{-\alpha\phi} - 1,\qquad h = e^{-\alpha\psi} - 1\]
+and $\alpha$ suitably large. Clearly
+\begin{align*}
+  z & >0, \\
+  z & =0\quad \text{on } \phi = 0\quad \text{and on } \psi=0, \\
+  z_s(0) & = 0,\quad z_{ss}(0)>0.
+\end{align*}
+We will choose $k,\alpha$ and an $\varepsilon$ neighbourhood $G_\varepsilon$
+of $O$ in $G$ so that $z$ satisfies \eqref{eq:A.3} in $G_\varepsilon$.
+
+(iii) Computing, we have
+\begin{equation}\label{eq:A.9}
+  Lz = gLh + hLg + 2a_{ij}g_ih_j.
+\end{equation}
+Here $g_i=g_{x_i}$ etc. Now (here $\beta$, $\gamma$ are summed from $2$ to $n-1$)
+for $\alpha$ large:
+\begin{equation}\label{eq:A.10}
+  \begin{aligned}
+    e^{\alpha\phi}\frac{Lg}{\alpha^2}
+    & = a_{ij}\phi_i\phi_j - \frac{1}{\alpha} (a_{ij}\phi_{ij}+b_i\phi_i) \geq c_0>0. \\
+    I
+    & = \alpha^{-2} e^{\alpha(\phi+\psi)} a_{ij}g_ih_j = a_{ij}\phi_i\psi_j \\
+    & = a_{1n} + 2ka_{1\gamma}x_{\gamma} + 4k^2 a_{\gamma\beta} x_{\gamma} x_{\beta}
+        + 2ka_{n\gamma}x_{\gamma}.
+  \end{aligned}
+\end{equation}
+We first choose $k$ so that $I$ is nonnegative on $\{\phi=0\}\cap\{\psi=0\}$,
+i.e., for points of the form
+\[(x_1,\ldots,x_n) = \biggl(-k\sum x_{\alpha}^2, x_2, \ldots, x_{n-1},
+  -k\sum x_{\alpha}^2\biggr).\]
+At such points, because of \eqref{eq:A.7} we have
+\[|a_{1n}| \leq C\Bigl(|x_1| + |x_n| + \sum x_{\alpha}^2\Bigr)\]
+with some constant $C$. $C$ will denote various constants independent of $k$
+and $\alpha$. Therefore, supposing $k\geq 1$,
+\[|a_{1n}| \leq Ck\sum x_{\alpha}^2.\]
+In addition, from \eqref{eq:A.6} we see that
+\begin{align*}
+  |a_{1\alpha}|, |a_{\alpha n}|
+  & \leq C|x| \leq C\Bigl(\sum |x_{\beta}| + k\sum x_{\beta}^2\Bigr) \\
+  & \leq C\sum |x_{\beta}|
+\end{align*}
+provided we require
+\[k \sum |x_{\beta}| \leq 1.\]
+
+Inserting these in \eqref{eq:A.10} we find
+\begin{align*}
+  I & \geq 4k^2a_{\alpha\beta} x_{\alpha} x_{\beta} - Ck\sum x_\alpha^2 - Ck\sum x_\alpha^2 \\
+    & \geq (c_0k^2-Ck)\sum x_\alpha^2
+\end{align*}
+for some $c_0>0$ by uniform ellipticity. We now fix $k\geq C/c_0$ and infer
+\[I \geq 0\quad \text{on } \{\phi=0\}\cap\{\psi=0\}\cap\bigl\{\sum |x_\alpha|<k^{-1}\bigr\}.\]
+
+It follows that, with $k$ so fixed
+\begin{equation}\label{eq:A.11}
+  I \geq C(\phi+\psi)\quad \text{in } G\cap\{|x|<\delta\}
+\end{equation}
+for some small $\delta$ independent of $\alpha$.
+
+(iv) Next, for $\alpha$ large, we have
+\begin{align*}
+  \frac{1}{\alpha^2} e^{\alpha\phi} Lg
+  & = a_{ij}\phi_i\phi_j - \frac{1}{\alpha} (a_{ij}\phi_{ij}+b_i\phi_i) \\
+  & \geq c_0>0
+\end{align*}
+for some positive constant $c_0$. A similar estimate holds for $Lh$.
+Inserting these in \eqref{eq:A.9} and using \eqref{eq:A.10} and \eqref{eq:A.11}
+we find
+\begin{equation}\label{eq:A.12}
+  \frac{1}{\alpha^2} e^{\alpha(\phi+\psi)}Lz
+    \geq c_0 (1 - e^{\alpha\phi} + 1 - e^{\alpha\psi}) + 2C(\phi+\psi)
+\end{equation}
+in $G\cap\{|x|<\delta\}$.
+
+By the theorem of the mean, for $\phi\leq 0$,
+\[1 - e^{\alpha\phi} \geq -\alpha e^{\alpha\phi} \phi.\]
+Let us now restrict ourselves to the region
+\[-\frac{1}{\alpha} < \phi, \psi \leq 0,\quad \alpha\text{ large}.\]
+Then
+\begin{align*}
+  1 - e^{\alpha\phi} & \geq -\frac{\alpha}{e} \phi \\
+  1 - e^{\alpha\psi} & \geq -\frac{\alpha}{e} \psi.
+\end{align*}
+Inserting these in \eqref{eq:A.12} we find
+\[\frac{1}{\alpha^2} e^{\alpha(\phi+\psi)} Lz
+  \geq \biggl(\frac{c_0 \alpha}{e}-2C\biggr) (|\phi| + |\psi|) \geq 0\]
+for $\alpha$ large in the region
+\[\biggl\{-\frac{1}{\alpha} < \phi, \psi \leq 0\biggr\} \cap \{|x|<\delta\} = G_{\alpha, \delta}.\]
+
+With $\alpha$ so fixed in the region $G_{\alpha,\delta}$,
+the function $z$ has all the desired properties. The proof is complete.
+
+We turn now to Lemmas \ref{lem:A.1} and \ref{lem:A.2}. As before it suffices to consider
+the case that $c(x)\equiv 0$.
+
+First, the
+\begin{proof}[Proof of Lemma A.2.]
+  We need only to show that near $O$ in $\Omega$ the function
+  \[z = \phi^p\]
+  satisfies $Lz\geq 0$. Then the proof proceeds as before.
+
+  A computation yields [see (A.1')]
+  \begin{align*}
+    \frac{1}{p}\phi^{2-p}Lz
+    & = (p-1)a_{ij}\phi_i\phi_j + \phi L\phi \\
+    & = Q + O(|x|^3) \\
+    & \geq 0 \quad \text{in } \overline{\Omega} \text{ near } O
+  \end{align*}
+  by (A.1').
+\end{proof}
+
+\begin{proof}[Proof of Lemma A.1.]
+  As before, we may suppose $w<0$ in $\overline{\Omega}\setminus 0$.
+  After a smooth change of variable we may suppose that the boundary hypersurfaces
+  are hyperplanes $x_1=0$ and $x_n = 0$.
+  By a further linear transformation of the variables $x_1$, $x_n$,
+  we may suppose that at $0$,
+  \[a_{11} = a_{nn} = 1,\qquad a_{1n} = 0,\]
+  and that $\Omega$ is the wedge:
+  \[x_n>0,\qquad x_1 > x_n\cot\theta_0\]
+  where $\mu = -\cos\theta_0$.
+  After these changes of variables the cone $\mathscr{C}$ has become a deformed cone,
+  but it suffices to prove the result in the new $\Omega$ for any closed cone in 
+  $\Omega$ as before---which we still denote as $\mathscr{C}$.
+
+  Near the origin in $\overline{\Omega}$ we shall construct a function
+  $z\in C^2(\Omega)\cap C(\overline{\Omega})$ satisfying
+  \begin{equation}\label{eq:A.13}
+    z = 0\quad\text{on } \partial\Omega
+  \end{equation}
+  \begin{equation}\label{eq:A.14}
+    z(x) \geq c_0|x|^p\quad\text{in } \mathscr{C},\quad\text{with } c_0>0
+  \end{equation}
+  \begin{equation}\label{eq:A.15}
+    Lz \geq 0\quad \text{in } \Omega.
+  \end{equation}
+  As in the proof of Lemma S we find that for some small $t>O$, $w+tz\leq 0$ in $\Omega$,
+  and the desired conclusion follows.
+
+  Introduce the complex variable
+  \[\zeta = x_1 + ix_n.\]
+  The wedge $\Omega$ is then given by $0< \arg \zeta < \theta_0$
+  and on $\Omega$ the function
+  \[v = \Im(\zeta^{\pi/\theta_0})\]
+  is harmonic in the variables $(x_1, x_n)$ and vanishes on $\partial\Omega$.
+  For $k = p\theta_0/\pi > 1$ set 
+  \[z = v^k.\]
+  Then $z$ satisfies \eqref{eq:A.13} and \eqref{eq:A.14},
+  and we will prove that $z$ satisfies \eqref{eq:A.15}---the proof of the lemma
+  will then be complete.
+
+  Near the origin in $\Omega$ we have, for $i,j=1,n$,
+  \begin{align*}
+    z_{x_i} & = kv^{k-1}v_{x_i} = O(|\zeta|^{p-1}) \\
+    z_{x_ix_j} & = kv^{k-1}v_{x_ix_j} + k(k-1)v^{k-2} v_{x_i}v_{x_j}
+      = O(|\zeta|^{p-2}).
+  \end{align*}
+  Thus
+  \begin{align*}
+    z_{x_1x_1} + z_{x_nx_n}
+    & = k(k-1)v^{k-2} (v_{x_1}^2 + v_{x_n}^2) \\
+    & \geq c_1|\zeta|^{p-2}\quad \text{for some } c_1>0.
+  \end{align*}
+  Since $Lz = z_{x_1x_1} + z_{x_nx_n}$ at $0$, and the leading coefficients of $L$
+  are continuous, with the other bounded, it follows that
+  \[Lz\geq 0\]
+  in $\Omega$ near the origin.
+\end{proof}

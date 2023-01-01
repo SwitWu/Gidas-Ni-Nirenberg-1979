@@ -1,0 +1,33 @@
+\section{Parabolic Equations}
+
+For parabolic equations the maximum principle as well as its Corollary 1,
+and the Hopf boundary lemma (see \cite{protter_maximum_1984}, Chapter 3, \S 3) hold.
+Therefore all our results admit extensions to such equations with essentially the same proofs.
+We shall content ourselves with the statement of several results for functions $u(t, x)$ 
+defined in a cylinder $\Omega = (0 < t < T) \times G$, $G$ is a bounded domain in $\mathbb{R}^n$ 
+with $\partial G$ smooth. 
+By a (maximal) cap of f2 we always mean $[0 < t < T) \times [\text{a (maximal) cap of }G]$.
+
+\noindent
+\textit{Condition I. }With $G=R^{\prime}< |x| <R$, let $u$ be a positive solution of
+\begin{equation}\label{eq:5.1}
+	-u_t+\Delta u+f(t,r,u)=O, \qquad u=0 \quad \text{on}\quad |x|=R
+\end{equation}
+with $u_t$, $u_j$, $u_{kl}$ belonging to $C$ in the closure. Here $f$ and $f_u$ are continuous in $\bar{G}\times\mathbb{R}^+$. Assume that $f$ is decreasing in $r$ and that $u(0, x)$, is rotationally symmetric and decreasing in $r$.
+\begin{theorem}\label{thm:5.1}
+	Assume Condition I. Then
+	\[u_r<0\quad \text{for}\quad \frac{R+R^{\prime}}{2} \leqq r <R.\]
+	If, in addition, $u$ is a solution in $|x| <R$, then $\forall t, 0<t<T$, $u$ is radially symmetric and $u_r<O$ for $0<r<R$.
+\end{theorem}
+
+The next result extends Theorem \ref{thm:2.1prime} in which we consider a maximal cap $\Omega\cap\{x_1 > \lambda_1 \}$.\\
+
+\noindent
+\textit{Condition II. }Consider a positive solution in $G$ of
+\[-u_t+F(t,x,u, u_i, u_{jk})=O,\qquad u=0 \quad\text{on}\quad \partial G\]
+with $F$ as in Section 2.4 satisfying in particular condition (c), and assume $u(0, x)$ satisfies condition \eqref{eq:2.2}.
+\begin{theorem}\label{thm:5.2}
+	Assume Condition II. Then $\forall t$ in $0<t<T$, $u(t,x)$ satisfies condition \eqref{eq:2.2}. Furthermore if $u_1=0$ at some point $(x, t_0)$ in $\Omega\cap\{x_1=\lambda_1\}$ then for $0<t\leqq t_0$, $u$ is symmetric about the plane $x_1 =\lambda_1$ and \eqref{eq:2.3} holds.
+\end{theorem}
+
+The results in Sect.~3 also admit extensions to parabolic equations.

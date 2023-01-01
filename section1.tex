@@ -1,4 +1,4 @@
-\section{Introduction}
+\section{Introduction}\label{sec:1}
 
 In an elegant paper \cite{serrin_symmetry_1971},
 Serrin considered solutions of second order elliptic equations satisfying 
@@ -29,7 +29,7 @@ The point of interest is that the result holds no matter what $f$ is.
 We should note that $f(u)\geq 0$ for all $u$,
 implies that any nontrivial solution is automatically positive in $\Omega$.
 
-Theorem \ref{thm:1} is a special case of Theorem 1$'$ in Sect.~2.
+Theorem \ref{thm:1} is a special case of Theorem \ref{thm:1prime} in Sect.~\ref{sec:2}.
 Another simple special result is:
 
 \begin{theorem}\label{thm:2}
@@ -44,7 +44,8 @@ Another simple special result is:
 This implies that $u$ can have no critical point in this larger half of the ring. 
 Note that no condition is imposed at the boundary $|x|=R'$.
 
-A third simple result (see Theorem 3$'$ in Sect.~3 for a more general form) is:
+A third simple result (see Theorem \ref{thm:3prime} in Sect.~\ref{sec:3}
+for a more general form) is:
 
 \begin{theorem}\label{thm:3}
   Let $u(x)$ be a $C^2$ solution of the ordinary differential equation
@@ -167,7 +168,9 @@ Here $L$ is a uniformly elliptic operator, i.e., for some constant $c_0>0$
 \end{equation}
 and the coefficients of $L$ are uniformly bounded in absolute value.
 
-\noindent \textbf{Maximum Principle.} \emph{If $u$ vanishes at some point in $\Omega$ then $u\equiv 0$.}
+\begin{MP}
+If $u$ vanishes at some point in $\Omega$ then $u\equiv 0$.
+\end{MP}
 
 \begin{lemma}
   Suppose there is a ball $B$ in $\Omega$ with a point $P\in\partial\Omega$
@@ -240,7 +243,7 @@ for convenience we present it here. See also \cite{protter_maximum_1984} pages 7
 \end{proof}
 
   
-In Sect.~3 we will also make use of an extension of the Hopf boundary lemma,
+In Sect.~\ref{sec:3} we will also make use of an extension of the Hopf boundary lemma,
 at a corner, due to Serrin (Lemma 2 in \cite{serrin_symmetry_1971}). Since it may be of further interest
 we present a slightly more general form (requiring however a bit more smoothness of
 the coefficients):
@@ -278,7 +281,7 @@ Note that conditions \eqref{eq:1.12} and \eqref{eq:1.12prime} are invariant unde
 change of coordinates, and of the choices of the particular functions $\varrho$ 
 and $\sigma$ representing the bounding hypersurfaces.
 The proof will be presented in the Appendix together with a rough extension
-in case \eqref{eq:1.12} is weakened (see Lemmas A.1 and A.2).
+in case \eqref{eq:1.12} is weakened (see Lemmas \ref{lem:A.1} and \ref{lem:A.2}).
 
 In addition to the maximum principle and Lemmas $H$ and $S$
 we use the procedure of moving up planes perpendicular to a fixed direction as in \cite{serrin_symmetry_1971},
