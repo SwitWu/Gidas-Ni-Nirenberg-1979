@@ -83,7 +83,7 @@ where $J$ is the Jacobian, is also a solution. For $n=4$, Eq.~\eqref{eq:1.5}
 as well as the corresponding, but simpler, equation $\Delta u = u^{\frac{n+2}{n-2}}$
 in \cite{loewner_partial_1974},
 and the linear equation $u = 0$, give rise to bona-fide solutions of the classical Euclidean
-Yang-Mills equations via `t Hooft's Ansatz [1,9]. 
+Yang-Mills equations via `t Hooft's Ansatz [1, 9]. 
 Equation~\eqref{eq:1.5} has the explicit solutions (replace $x$ by $ix$ in the solutions of 
 page 250 of \cite{loewner_partial_1974})
 \begin{equation}\label{eq:1.7}
@@ -93,7 +93,7 @@ for $\lambda>0$, $x_0\in \mathbb{R}^n$.
 These solutions yield the well-known one-instanton solutions in a regular gauge of the Yang-Mills 
 equations. We used the same methods as in the proofs of the preceding results to show that these
 are the only positive solutions in $\mathbb{R}^n$ with reasonable behaviour at infinity,
-namely $u=O(|x|^{2-N})$. This behaviour follows from the finiteness of the action---as was 
+namely $u=O(|x|^{2-n})$. This behaviour follows from the finiteness of the action---as was 
 proved by K.~Uhlenbeck (private communication). This uniqueness result together with the well 
 known properties (see \cite{loewner_partial_1974}) of $\Delta u = u^{(n+2)/(n-2)}$ and 
 of $\Delta u = 0$ (\cite{hopf_differential_2003}) show 
@@ -138,7 +138,7 @@ $G_{vjk}$ is a positive definite matrix for all values of the arguments.
 
 It is natural to ask under what conditions one can assert that expansions of the 
 form~\eqref{eq:1.9} hold. Here is an example:
-\begin{proposition}
+\begin{proposition}\label{prop:1}
   Let $v\in C^{2+\mu}$, $0<\mu<1$, be a positive solution of
   \begin{equation}\label{eq:1.8prime}
     \Delta v + f(v) = 0 \tag{$1.8'$}
@@ -152,7 +152,7 @@ form~\eqref{eq:1.9} hold. Here is an example:
 Example. The function
 \[v(x) = (1+|x|^4)^{-(n-2)/4}\]
 satisfies~\eqref{eq:1.8prime} with
-\[f(v) = (n^2-4) v^{\frac{n+6}{n-2}} \biggl(v^{\frac{4}{n-2}}-1\biggr)^{1/2}.\]
+\[f(v) = (n^2-4) v^{\frac{n+6}{n-2}} \biggl(v^{\frac{4}{2-n}}-1\biggr)^{1/2}.\]
 This satisfies the conditions of the proposition with $k = \frac{n+4}{n-2}$.
 
 Our results are based on a well-known form of the maximum principle \cite{protter_maximum_1984} for
@@ -172,14 +172,16 @@ and the coefficients of $L$ are uniformly bounded in absolute value.
 If $u$ vanishes at some point in $\Omega$ then $u\equiv 0$.
 \end{MP}
 
-\begin{lemma}
+We use the Hopf lemma in the form:
+
+\begin{lemmaH}
   Suppose there is a ball $B$ in $\Omega$ with a point $P\in\partial\Omega$
   on its boundary and suppose $u$ is continuous in $\Omega\cup P$ and $u(P)=0$.
   Then if $u\not\equiv 0$ in $B$ we have for an outward directional derivative at $P$,
   \[\frac{\partial u}{\partial \nu}(P) > 0,\]
   in the sense that if $Q$ approaches $P$ in $B$ along a radius then
   \[\lim_{Q\to P} \frac{u(P)-u(Q)}{|P-Q|} > 0.\]
-\end{lemma}
+\end{lemmaH}
 
 This is well known in case $c(x)\leq 0$ (see Theorem 7, p.~65 of \cite{protter_maximum_1984}) but,
 as already observed by Serrin in \cite{serrin_symmetry_1971} p.~310, the more general result follows by the same
@@ -248,7 +250,7 @@ at a corner, due to Serrin (Lemma 2 in \cite{serrin_symmetry_1971}). Since it ma
 we present a slightly more general form (requiring however a bit more smoothness of
 the coefficients):
 
-\begin{lemma}
+\begin{lemmaS}
   Let $\Omega$ be a domain in $\mathbb{R}^n$ with the origin $O$ on its boundary.
   Assume that near $O$ the boundary consist of two transversally intersecting
   $C^2$ hypersurfaces $\varrho = 0$ and $\sigma = 0$.
@@ -275,7 +277,7 @@ the coefficients):
         \text{at } O \text{ in case of equality in \eqref{eq:1.12}}
     \end{aligned}
   \end{equation}
-\end{lemma}
+\end{lemmaS}
 
 Note that conditions \eqref{eq:1.12} and \eqref{eq:1.12prime} are invariant under
 change of coordinates, and of the choices of the particular functions $\varrho$ 
@@ -283,7 +285,7 @@ and $\sigma$ representing the bounding hypersurfaces.
 The proof will be presented in the Appendix together with a rough extension
 in case \eqref{eq:1.12} is weakened (see Lemmas \ref{lem:A.1} and \ref{lem:A.2}).
 
-In addition to the maximum principle and Lemmas $H$ and $S$
+In addition to the maximum principle and Lemmas H and S
 we use the procedure of moving up planes perpendicular to a fixed direction as in \cite{serrin_symmetry_1971},
 and we shall now describe it geometrically.
 
@@ -339,10 +341,12 @@ at some point not on $T_{\lambda_2}$, or $T_{\lambda_2}$ is orthogonal to
 $\partial\Omega$ at some point.
 
 A word on notation: For a set $S$ in $\partial\Omega$, by a neighbourhood of $S$ in $\Omega$
-we mean $\Omega\cap$(an open neighbourhood of $S$ in $\mathbb{R}^n$).
+we mean $\Omega\,\cap$\,(an open neighbourhood of $S$ in $\mathbb{R}^n$).
 
-Section 2 contains the main results for general second order elliptic equations---including 
-the proofs of Theorem 1--3. Some extensions are given in 3 and straightforward extensions to 
-parabolic equations are briefly described in Sect.~5. Section 4 is concerned with 
-the proofs of Theorem 4 and Proposition 1, This may be read independently of the other sections.
+Section \ref{sec:2} contains the main results for general second order elliptic equations---including the proofs of Theorem \ref{thm:1}--\ref{thm:3}.
+Some extensions are given in 3 and straightforward extensions to 
+parabolic equations are briefly described in Sect.~\ref{sec:5}. 
+Section \ref{sec:4} is concerned with the proofs of Theorem \ref{thm:4}
+and Proposition \ref{prop:1}.
+This may be read independently of the other sections.
 The Appendix contains the proof of Lemma S.
